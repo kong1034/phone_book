@@ -1,6 +1,6 @@
-import classes from '../../styles/search.module.scss';
+import classes from '../styles/search.module.scss';
 
-export default function Search() {
+export default function SearchComponents() {
     return <>
         <section className={classes.search_border}>
             <input className={classes.input} type="text"/>
