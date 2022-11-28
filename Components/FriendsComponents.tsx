@@ -7,7 +7,7 @@ import { friends } from '../Interface/friends';
 
 export default function FriendsComponents() {
     const [list, setList] = useState<friends[]>([]);
-    const url = '/api/hello';
+    const url = '/api/friends';
     
     useEffect(() => {
         axios.get(url)
