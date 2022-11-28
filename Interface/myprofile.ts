@@ -1,5 +1,5 @@
 export interface myprofile {
-    "id":string,
+    "id":number,
     "img":string
     "username":string
 }

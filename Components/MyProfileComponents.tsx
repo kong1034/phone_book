@@ -1,12 +1,29 @@
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { myprofile } from '../Interface/myprofile';
 import classes from '../styles/myprofile.module.scss';
 
 export default function MyProfileComponents() {
+    const [data,setData] = useState<myprofile>();
+    const url = '/api/myprofile';
+
+    useEffect(() => {
+        axios.get(url)
+        .then(res => setData(res.data))
+        .catch(err => console.log(err));
+    }, [url])
+
+    console.log(data);
     return <>
         <div className={classes.img_div}>
-            <img className={classes.img} src="http://pds.joongang.co.kr/news/component/htmlphoto_mmdata/201106/12/htm_2011061223531330003010-002.JPG" alt="MyImg"/>
+            {
+                <img className={classes.img} src={data?.img} alt="MyImg"/>
+            }
         </div>
         <div className={classes.my_name}>
-            <h2>My Name</h2>
+            {
+                <h2>{data?.username}</h2>
+            }
         </div>
     </>
 }
