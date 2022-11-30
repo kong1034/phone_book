@@ -5,8 +5,9 @@ import { friends } from '../../Interface/friends';
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<friends[]>
+  res: NextApiResponse<any>
 ) {
-  console.log(req.body)
-  res.status(200).json(db.friends);
+    const query = req.query;
+    const id = query;
+  res.status(200).json(db.friends[Number(id.friendsId)-1]);
 }

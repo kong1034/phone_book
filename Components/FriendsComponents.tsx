@@ -19,7 +19,7 @@ export default function FriendsComponents() {
     <ul>
         {
             list?.map(item => (
-                <li key={item.id}><Link href={{pathname:"/friends",query:{query:item.id}}}><img src={item.img}/><h3>{item.username}</h3></Link></li>
+                <li key={item.id}><Link href={`/friends/${item.id}`}><img src={item.img}/><h3>{item.username}</h3></Link></li>
             ))
         }
     </ul>

@@ -1,10 +1,24 @@
 import classes from '../styles/friendInfo.module.scss';
 import Link from 'next/link';
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { friends } from "../Interface/friends";
+import axios from "axios";
 
 export default function FriendInfoComponents() {
+    const router = useRouter();
+    const [data, setData] = useState<friends>();
+    const url = `/api/${router.query.friendsId}`;
+    
+    useEffect(() => {
+        axios.get(url)
+        .then(res => setData(res.data))
+        .catch(err => console.log(err));
+    }, [url])
+    
     return <div className={classes.info_border}>
-        <div>생년월일 : 1995.01.22</div>
-        <div>번호 : 010 - 1111 - 2222</div>
+        <div>생년월일 : {data?.birth}</div>
+        <div>번호 : {data?.phone}</div>
         <div className={classes.fnc_border}>
             <Link className={classes.img_box} href="#">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6ttymreoYakJnE6TRuiVftjMVR3c5QdO88Q&usqp=CAU" alt="메시지" />

@@ -13,7 +13,6 @@ export default function MyProfileComponents() {
         .catch(err => console.log(err));
     }, [url])
 
-    console.log(data);
     return <>
         <div className={classes.img_div}>
             {
