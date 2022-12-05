@@ -5,25 +5,17 @@ import axios from 'axios';
 import { friends } from '../Interface/friends';
 
 
-export default function FriendProfileComponents() {
+export default function FriendProfileComponents({info} : {info : Number | undefined}) {
     const router = useRouter();
-    const [data, setData] = useState<friends>();
-    const url = `/api/${router.query.friendsId}`;
-    
-    useEffect(() => {
-        axios.get(url)
-        .then(res => setData(res.data))
-        .catch(err => console.log(err));
-    }, [url])
 
     return <>
          <div className={classes.img_div}>
             {
-                <img className={classes.img} src={data?.img} alt="MyImg"/>
+                <img className={classes.img} alt="MyImg"/>
             }
         </div>
         <div className={classes.my_name}>
-            <h2>{data?.username}</h2>
+            <h2>{}</h2>
         </div>
     </>
 }
