@@ -9,7 +9,6 @@ export default function Header() {
         router.back();
     }
     router.pathname === "/" ? check = true : check = false;
-    console.log(check);
     return <>
         <header className={classes.header}>
             <div>
@@ -18,7 +17,6 @@ export default function Header() {
                         check === true ? "" : "<"
                     }
                 </div>
-                {/* <img onClick={goBack} src="https://w7.pngwing.com/pngs/50/539/png-transparent-arrow-computer-icons-white-angle-white-text-thumbnail.png" alt="뒤로가기"/> */}
             </div>
             <h1>Phone Book</h1>
             <div>
