@@ -1,10 +1,8 @@
-import FriendProfileComponents from "../Components/FriendProfileComponents";
+import { FriendProfileComponents } from '../Components/FriendProfileComponents';
 import classes from '../styles/myprofile.module.scss';
 
-export default function FriendProfile() {
+export default function FriendProfile(info:any) {
     return <>
-        <section className={classes.profile}>
-            <FriendProfileComponents/>
-        </section>
+            <FriendProfileComponents val={info}/>
     </>
 }

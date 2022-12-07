@@ -1,21 +1,20 @@
 import classes from '../styles/myprofile.module.scss';
-import { useRouter } from "next/router"
-import { useEffect, useState } from 'react';
-import axios from 'axios';
 import { friends } from '../Interface/friends';
+import { NextPage } from 'next';
 
 
-export default function FriendProfileComponents({info} : {info : Number | undefined}) {
-    const router = useRouter();
-
+export const FriendProfileComponents = (infodata:any) => {
+    console.log(infodata.info.id);
     return <>
-         <div className={classes.img_div}>
-            {
-                <img className={classes.img} alt="MyImg"/>
-            }
-        </div>
-        <div className={classes.my_name}>
-            <h2>{}</h2>
-        </div>
+        <section className={classes.profile}>
+            <div className={classes.img_div}>
+                {
+                    <img className={classes.img} src={infodata.info.img} alt="MyImg"/>
+                }
+            </div>
+            <div className={classes.my_name}>
+                <h2>{infodata.info.username}</h2>
+            </div>
+        </section>
     </>
 }
