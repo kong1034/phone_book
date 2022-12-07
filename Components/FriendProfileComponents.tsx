@@ -4,7 +4,6 @@ import { NextPage } from 'next';
 
 
 export const FriendProfileComponents = (infodata:any) => {
-    console.log(infodata.info.id);
     return <>
         <section className={classes.profile}>
             <div className={classes.img_div}>

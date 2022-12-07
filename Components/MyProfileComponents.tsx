@@ -14,15 +14,17 @@ export default function MyProfileComponents() {
     }, [url])
 
     return <>
-        <div className={classes.img_div}>
-            {
-                <img className={classes.img} src={data?.img} alt="MyImg"/>
-            }
-        </div>
-        <div className={classes.my_name}>
-            {
-                <h2>{data?.username}</h2>
-            }
-        </div>
+        <section className={classes.profile}>
+            <div className={classes.img_div}>
+                {
+                    <img className={classes.img} src={data?.img} alt="MyImg"/>
+                }
+            </div>
+            <div className={classes.my_name}>
+                {
+                    <h2>{data?.username}</h2>
+                }
+            </div>
+        </section>
     </>
 }

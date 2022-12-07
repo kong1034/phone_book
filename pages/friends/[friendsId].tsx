@@ -33,21 +33,20 @@ export default function FriendId({ infodata } : { infodata:friends }) {
 
 //미리 렌더링 (SEO에 좋음)
 export const getStaticPaths = async () => {
-    let arr = null;
     const url = 'http://localhost:3000/api/friends';
-    await axios.get(url)
-        .then(res => arr = res.data)
-        .catch(err => console.log(err));
+    let call = await axios.get(url)
+    let arr:friends[] = call.data;
+    console.log(arr[0].id);
     return {
-        fallback: true,
-        paths: [
-            {params: {friendsId: "1"}},
-            {params: {friendsId: "2"}}
-        ]
-    }
+        fallback: false,
+        paths: arr.map(val => ({
+            params: {
+                friendsId : val.id.toString()
+            }
+        }))
+    } 
 }
 export const getStaticProps = async (context:any) => {
-
     const url = `http://localhost:3000/api/${context.params.friendsId}`;
     let call = null;
     await axios.get(url)
