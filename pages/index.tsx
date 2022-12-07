@@ -1,10 +1,7 @@
 import classes from '../styles/home.module.scss';
-import Friends from '../Layout/Friends';
 import Header from '../Layout/Header';
-import MyProfile from '../Layout/MyProfile';
 import Head from 'next/head';
 import axios from 'axios';
-import { friends } from '../Interface/friends';
 import MyProfileComponents from '../Components/MyProfileComponents';
 import FriendsComponents from '../Components/FriendsComponents';
 import { friendsProps } from '../Interface/friendsProps';

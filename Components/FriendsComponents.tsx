@@ -1,17 +1,15 @@
 import classes from '../styles/friends.module.scss';
 import Link from 'next/link';
-import axios from 'axios';
-import { useEffect, useState, useRef } from 'react';
-import { friends } from '../Interface/friends';
+import {  useRef } from 'react';
 import { friendsProps } from '../Interface/friendsProps';
 
 
 export default function FriendsComponents(arr:friendsProps) {
     const serachValue = useRef<HTMLInputElement>(null);
     //const [list, setList] = useState<friends[]>([]);
-    const [search, setSearch] = useState<String>("");
-    const [check, setCheck] = useState<Boolean>(false);
-    const url = '/api/friends';
+    // const [search, setSearch] = useState<String>("");
+    // const [check, setCheck] = useState<Boolean>(false);
+    //const url = '/api/friends';
     
     //친구 리스트 불러오기
     // useEffect(() => {

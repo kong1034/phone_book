@@ -36,7 +36,6 @@ export const getStaticPaths = async () => {
     const url = 'http://localhost:3000/api/friends';
     let call = await axios.get(url)
     let arr:friends[] = call.data;
-    console.log(arr[0].id);
     return {
         fallback: false,
         paths: arr.map(val => ({
@@ -50,7 +49,7 @@ export const getStaticProps = async (context:any) => {
     const url = `http://localhost:3000/api/${context.params.friendsId}`;
     let call = null;
     await axios.get(url)
-        .then(res => {call = res.data; console.log(res.data)})
+        .then(res => {call = res.data;})
         .catch(err => console.log(err));
     return {
         props: {

@@ -1,6 +1,4 @@
 import classes from '../styles/myprofile.module.scss';
-import { friends } from '../Interface/friends';
-import { NextPage } from 'next';
 
 
 export const FriendProfileComponents = (infodata:any) => {

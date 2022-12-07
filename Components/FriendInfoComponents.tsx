@@ -1,9 +1,5 @@
 import classes from '../styles/friendInfo.module.scss';
 import Link from 'next/link';
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
-import { friends } from "../Interface/friends";
-import axios from "axios";
 
 export default function FriendInfoComponents(infodata:any) {
     // const router = useRouter();
