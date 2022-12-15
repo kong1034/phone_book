@@ -5,8 +5,9 @@ import axios from 'axios';
 import MyProfileComponents from '../Components/MyProfileComponents';
 import FriendsComponents from '../Components/FriendsComponents';
 import { friendsProps } from '../Interface/friendsProps';
+import { PrismaClient } from '@prisma/client';
 
-export default function Home({arr}:{arr:any}) {
+export default function Home({friends}:{friends:any}) {
   return <>
   <Head>
     <title>PhoneBook</title>
@@ -18,18 +19,20 @@ export default function Home({arr}:{arr:any}) {
     <section className={classes.container}>
       <Header/>
       <MyProfileComponents/>
-      <FriendsComponents vals = {arr}/>
+      <FriendsComponents vals = {friends}/>
     </section>
   </>
 }
 //미리 렌더링
 export const getStaticProps = async () => {
-  const url = 'http://localhost:3000/api/friends';
-  let call = await axios.get(url)
-  let arr:any = call.data
+  let client = new PrismaClient();
+  let friends = await client.friends.findMany();
+  // const url = 'http://localhost:3000/api/friends';
+  // let call = await axios.get(url)
+  // let arr:any = call.data
   return {
       props: {
-          arr
+          friends
       }
   }
 }
