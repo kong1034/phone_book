@@ -7,7 +7,7 @@ import FriendsComponents from '../Components/FriendsComponents';
 import { friendsProps } from '../Interface/friendsProps';
 import { PrismaClient } from '@prisma/client';
 
-export default function Home({friends}:{friends:any}) {
+export default function Home({infodata}:{infodata:any}) {
   return <>
   <Head>
     <title>PhoneBook</title>
@@ -18,21 +18,31 @@ export default function Home({friends}:{friends:any}) {
   </Head>
     <section className={classes.container}>
       <Header/>
-      <MyProfileComponents/>
-      <FriendsComponents vals = {friends}/>
+      <MyProfileComponents vals = {infodata.myprofile}/>
+      <FriendsComponents vals = {infodata.friends}/>
     </section>
   </>
 }
 //미리 렌더링
 export const getStaticProps = async () => {
   let client = new PrismaClient();
+  
   let friends = await client.friends.findMany();
+  let myprofile = await client.myprofile.findUnique( {
+    where : {
+      id : 1
+    }
+  });
+  let jsonData = {
+    friends,
+    myprofile
+  };
   // const url = 'http://localhost:3000/api/friends';
   // let call = await axios.get(url)
   // let arr:any = call.data
   return {
       props: {
-          friends
+        infodata: jsonData
       }
   }
 }
