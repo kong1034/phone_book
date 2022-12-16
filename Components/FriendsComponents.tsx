@@ -2,6 +2,7 @@ import classes from '../styles/friends.module.scss';
 import Link from 'next/link';
 import {  useRef } from 'react';
 import { friendsProps } from '../Interface/friendsProps';
+import { friends } from '../Interface/friends';
 
 
 export default function FriendsComponents(arr:friendsProps) {
@@ -85,7 +86,7 @@ export default function FriendsComponents(arr:friendsProps) {
             </section>
             <ul>
                 {
-                    arr.vals.map(item => (
+                    arr.vals.map((item:friends) => (
                         <li key={item.id}><Link href={`/friends/${item.id}`}><img src={item.img}/><h3>{item.username}</h3></Link></li>
                     ))
                 }
