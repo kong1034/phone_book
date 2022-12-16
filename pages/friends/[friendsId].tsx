@@ -34,7 +34,7 @@ export const getStaticPaths = async () => {
     let friends = await client.friends.findMany();
     return {
         fallback: false,
-        paths: friends.map(val => ({
+        paths: friends.map((val:friends) => ({
             params: {
                 friendsId : val.id.toString()
             }
