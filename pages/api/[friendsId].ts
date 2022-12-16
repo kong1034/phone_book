@@ -1,13 +1,19 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import { PrismaClient } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next'
-//import db from "../../DB/db.json";
 import { friends } from '../../Interface/friends';
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<any>
+  res: NextApiResponse<friends | null>
 ) {
-  //   const query = req.query;
-  //   const id = query;
-  // res.status(200).json(db.friends[Number(id.friendsId)-1]);
+  const paramId =  Number(req.query.friendsId);
+  let client = new PrismaClient();
+  let friendInfo = await client.friends.findUnique({
+      where: {
+          id: paramId
+      }
+  })
+  
+  res.status(200).json(friendInfo);
 }

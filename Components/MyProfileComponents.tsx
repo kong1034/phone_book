@@ -4,15 +4,11 @@ import { myprofile } from '../Interface/myprofile';
 import { myprofileProps } from '../Interface/myprofileProps';
 import classes from '../styles/myprofile.module.scss';
 
-export default function MyProfileComponents(arr:any) {
+export default function MyProfileComponents(arr:myprofileProps) {
     const [data,setData] = useState<myprofile>();
-    //const url = '/api/myprofile';
-
+    
     useEffect(() => {
         setData(arr.vals);
-        // axios.get(url)
-        // .then(res => setData(res.data))
-        // .catch(err => console.log(err));
     }, [arr])
 
     return <>

@@ -1,17 +1,8 @@
 import classes from '../styles/friendInfo.module.scss';
 import Link from 'next/link';
+import { friendIdProps } from '../Interface/friendIdProps';
 
-export default function FriendInfoComponents(infodata:any) {
-    // const router = useRouter();
-    // const [data, setData] = useState<friends>();
-    // const url = `/api/${router.query.friendsId}`;
-    
-    // useEffect(() => {
-    //     axios.get(url)
-    //     .then(res => setData(res.data))
-    //     .catch(err => console.log(err));
-    // }, [url])
-    
+export default function FriendInfoComponents(infodata:friendIdProps) {
     return <div className={classes.info_border}>
         <div>생년월일 : {infodata.info.birth}</div>
         <div>번호 : {infodata.info.phone}</div>
