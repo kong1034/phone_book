@@ -1,7 +1,8 @@
+import { friendIdProps } from '../Interface/friendIdProps';
 import classes from '../styles/myprofile.module.scss';
 
 
-export const FriendProfileComponents = (infodata:any) => {
+export const FriendProfileComponents = (infodata:friendIdProps) => {
     return <>
         <section className={classes.profile}>
             <div className={classes.img_div}>

@@ -5,6 +5,7 @@ import axios from "axios";
 import { FriendProfileComponents } from "../../Components/FriendProfileComponents";
 import FriendInfoComponents from "../../Components/FriendInfoComponents";
 import { friends } from "../../Interface/friends";
+import { PrismaClient } from "@prisma/client";
 
 export default function FriendId({ infodata } : { infodata:friends }) {
     //const router = useRouter();
@@ -29,12 +30,11 @@ export default function FriendId({ infodata } : { infodata:friends }) {
 
 //미리 렌더링 (SEO에 좋음)
 export const getStaticPaths = async () => {
-    const url = 'http://localhost:3000/api/friends';
-    let call = await axios.get(url)
-    let arr:friends[] = call.data;
+    let client = new PrismaClient();
+    let friends = await client.friends.findMany();
     return {
         fallback: false,
-        paths: arr.map(val => ({
+        paths: friends.map(val => ({
             params: {
                 friendsId : val.id.toString()
             }
@@ -42,14 +42,16 @@ export const getStaticPaths = async () => {
     } 
 }
 export const getStaticProps = async (context:any) => {
-    const url = `http://localhost:3000/api/${context.params.friendsId}`;
-    let call = null;
-    await axios.get(url)
-        .then(res => {call = res.data;})
-        .catch(err => console.log(err));
+    const paramId =  Number(context.params.friendsId);
+    let client = new PrismaClient();
+    let friendInfo = await client.friends.findUnique({
+        where: {
+            id: paramId
+        }
+    })
     return {
         props: {
-            infodata: call
+            infodata: friendInfo
         }
     }
 }

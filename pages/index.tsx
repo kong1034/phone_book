@@ -6,8 +6,10 @@ import MyProfileComponents from '../Components/MyProfileComponents';
 import FriendsComponents from '../Components/FriendsComponents';
 import { friends } from '../Interface/friends';
 import { myprofile } from '../Interface/myprofile';
+import { infodata } from '../Interface/infodata';
+import { PrismaClient } from '@prisma/client';
 
-export default function Home({infodata}:{infodata:any}) {
+export default function Home({infodata}:{infodata:infodata}) {
   return <>
   <Head>
     <title>PhoneBook</title>
@@ -25,13 +27,13 @@ export default function Home({infodata}:{infodata:any}) {
 }
 //미리 렌더링
 export const getStaticProps = async () => {
-  const friendUrl = 'http://localhost:3000/api/friends';
-  let getFriends = await axios.get(friendUrl)
-  let friends:friends = getFriends.data
-
-  const myprofileUrl = 'http://localhost:3000/api/myprofile';
-  let getMyprofile = await axios.get(myprofileUrl)
-  let myprofile:myprofile = getMyprofile.data
+  let client = new PrismaClient();
+  let friends = await client.friends.findMany();
+  let myprofile = await client.myprofile.findUnique( {
+    where : {
+      id : 1
+    }
+  });
 
   let jsonData = {
     friends,
