@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import Link from 'next/link';
 import classes from '../styles/header.module.scss';
 
 export default function Header() {
@@ -20,7 +20,7 @@ export default function Header() {
             </div>
             <h1>Phone Book</h1>
             <div>
-                <div>+</div>
+                <Link className={classes.link} href='/addFriend'>+</Link>
             </div>
         </header>
     </>
