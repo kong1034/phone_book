@@ -12,7 +12,7 @@ export default function Header() {
     return <>
         <header className={classes.header}>
             <div>
-                <div onClick={goBack}>
+                <div className={classes.back_btn} onClick={goBack}>
                     {
                         check === true ? "" : "<"
                     }

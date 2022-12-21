@@ -1,7 +1,7 @@
 /* 헤더 */
 .header {
     width: 100%;
-    height: 13%;
+    height: 15%;
     border-bottom: 1px solid #ffb020;
     background-color: #ffb020;
     display: flex;
@@ -10,7 +10,8 @@
         height: 40%;
         width: 10%;
         margin-top: 6%;
-        .link {
+        color: #fff;
+        .link, .back_btn {
             cursor: pointer;
             font-size: 2.5vw;
             color: #fff;
