@@ -1,10 +1,10 @@
 import Head from "next/head"
-import { ChangeEvent, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import classes from "../../styles/addfriend.module.scss"
 import axios from "axios";
 import { Event } from "../../Interface/Event";
 
-export default function addFriend() {
+export default function AddFriend() {
     const imgRef = useRef<HTMLInputElement>(null);
     const [image, setImage] = useState("");
 
