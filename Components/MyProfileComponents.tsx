@@ -7,6 +7,7 @@ import classes from '../styles/myprofile.module.scss';
 export default function MyProfileComponents(arr:myprofileProps) {
     const [data,setData] = useState<myprofile>();
     
+    //내 정보 파라미터로 받기
     useEffect(() => {
         setData(arr.vals);
     }, [arr])

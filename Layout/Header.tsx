@@ -5,9 +5,13 @@ import classes from '../styles/header.module.scss';
 export default function Header() {
     let check = false;
     const router = useRouter();
+
+    //뒤로가기 기능
     const goBack = () => {
         router.back();
     }
+
+    //url에 따른 뒤로가기 버튼 조건부 렌더링
     router.pathname === "/" ? check = true : check = false;
     return <>
         <header className={classes.header}>
