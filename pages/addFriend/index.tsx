@@ -3,22 +3,29 @@ import { useRef, useState } from "react"
 import classes from "../../styles/addfriend.module.scss"
 import axios from "axios";
 import { Event } from "../../Interface/Event";
+import { useRouter } from "next/router";
 
 export default function AddFriend() {
     const imgRef = useRef<HTMLInputElement>(null);
     const [image, setImage] = useState("");
+    const nameRef = useRef<HTMLInputElement>(null);
+    const birthRef = useRef<HTMLInputElement>(null);
+    const numberRef = useRef<HTMLInputElement>(null);
+    const router = useRouter();
 
+    //input 파일버튼 대신 일반버튼 기능
     const imageUploadBtn = () => {
         imgRef.current?.click();
     }
 
+    //업로드 한 이미지 url 가져오기
     const fileChange = async (e: Event<HTMLInputElement>) => {
         const uploaded = await imageUploadFnc(e.target.files?.[0]);
         setImage(uploaded.data.eager[0].url);
     }
 
+    //이미지 서버에 업로드
     const imageUploadFnc = async (file:any) => {
-        console.log(file);
         const cloudName = "dlyhfjp5p";
         const presetName = "friend-img";
         const data = new FormData();
@@ -31,6 +38,22 @@ export default function AddFriend() {
         const res = await axios.post(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload` ,data)
 
         return res;
+    }
+
+    //추가 기능
+    const addFriendBtn = async () => {
+        const datas:any = {
+            img: image,
+            username : nameRef.current?.value,
+            birth: birthRef.current?.value,
+            phone: numberRef.current?.value
+        }
+        const addFriendApi = axios.post('/api/friends', datas)
+        .then(res => {
+            alert('친구 추가가 완료되었습니다.');
+            router.push('/');
+        })
+        console.log(datas)
     }
     return <>
     <Head>
@@ -53,18 +76,18 @@ export default function AddFriend() {
             <div className={classes.info_div}>
                 <p>
                 <label htmlFor="name">이름</label>
-                <input type='text'/>
+                <input ref={nameRef} type='text'/>
                 </p>
                 <p>
                 <label htmlFor="name">생년월일</label>
-                <input className={classes.birth_input} type='select'/>
+                <input ref={birthRef} className={classes.birth_input} type='select'/>
                 </p>
                 <p>
                 <label htmlFor="name">번호</label>
-                <input type='text'/>
+                <input ref={numberRef} type='text'/>
                 </p>
 
-                <button>추가하기</button>
+                <button onClick={addFriendBtn}>추가하기</button>
             </div>
         </div>
     </section>

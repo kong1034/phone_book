@@ -5,10 +5,15 @@ import { friends } from '../../Interface/friends';
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<friends[] | null>
+  res: NextApiResponse<string>
 ) {
   let client = new PrismaClient();
-  let friends = await client.friends.findMany();
+  if(req.method === 'POST') {
+    await client.friends.create({
+        data:req.body
+    })
+  }
 
-  res.status(200).json(friends);
+  res.status(200).json("추가 완료");
+  res.status(500).json("500 에러입니다.");
 }
