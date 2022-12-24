@@ -12,5 +12,5 @@ export default async function handler(
       id : 1
     }
   });
-  res.status(200).json(myprofile);
+  return res.status(200).json(myprofile);
 }

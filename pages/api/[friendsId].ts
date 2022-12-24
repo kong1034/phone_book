@@ -15,5 +15,5 @@ export default async function handler(
       }
   })
   
-  res.status(200).json(friendInfo);
+  return res.status(200).json(friendInfo);
 }

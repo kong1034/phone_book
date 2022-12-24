@@ -14,6 +14,5 @@ export default async function handler(
     })
   }
 
-  res.status(200).json("추가 완료");
-  res.status(500).json("500 에러입니다.");
+  return res.status(200).json("추가 완료");
 }
