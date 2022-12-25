@@ -4,6 +4,7 @@ import classes from "../../styles/addfriend.module.scss"
 import axios from "axios";
 import { Event } from "../../Interface/Event";
 import { useRouter } from "next/router";
+import Header from "../../Layout/Header";
 
 export default function AddFriend() {
     const imgRef = useRef<HTMLInputElement>(null);
@@ -64,9 +65,7 @@ export default function AddFriend() {
         />
     </Head>
     <section className={classes.container}>
-        <header className={classes.header}>
-            <h1>친구 추가</h1>
-        </header>
+        <Header/>
         <div className={classes.add_div}>
             <div className={classes.img_div}>
                 <input type="file" accept="image/*" ref={imgRef} onChange={fileChange}/>
