@@ -29,19 +29,19 @@ export default function FriendId({ infodata } : { infodata:friends }) {
 }
 
 //미리 렌더링 (SEO에 좋음)
-export const getStaticPaths = async () => {
-    let client = new PrismaClient();
-    let friends = await client.friends.findMany();
-    return {
-        fallback: false,
-        paths: friends.map((val:friends) => ({
-            params: {
-                friendsId : val.id.toString()
-            }
-        }))
-    } 
-}
-export const getStaticProps = async (context:any) => {
+// export const getStaticPaths = async () => {
+//     let client = new PrismaClient();
+//     let friends = await client.friends.findMany();
+//     return {
+//         fallback: false,
+//         paths: friends.map((val:friends) => ({
+//             params: {
+//                 friendsId : val.id.toString()
+//             }
+//         }))
+//     } 
+// }
+export const getServerSideProps = async (context:any) => {
     const paramId =  Number(context.params.friendsId);
     let client = new PrismaClient();
     let friendInfo = await client.friends.findUnique({

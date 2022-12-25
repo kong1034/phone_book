@@ -26,7 +26,7 @@ export default function Home({infodata}:{infodata:infodata}) {
   </>
 }
 //미리 렌더링
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   let client = new PrismaClient();
   let friends = await client.friends.findMany();
   let myprofile = await client.myprofile.findUnique( {
