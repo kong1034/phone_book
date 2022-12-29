@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { myprofile } from '../Interface/myprofile';
 import { myprofileProps } from '../Interface/myprofileProps';

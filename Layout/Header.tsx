@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import classes from '../styles/header.module.scss';
-import { useState } from 'react';
 
 export default function Header() {
     let check = false;

@@ -3,7 +3,6 @@ import Link from 'next/link';
 import {  useRef, useState } from 'react';
 import { friendsProps } from '../Interface/friendsProps';
 import { friends } from '../Interface/friends';
-import { Event } from '../Interface/Event';
 
 
 export default function FriendsComponents(arr:friendsProps) {

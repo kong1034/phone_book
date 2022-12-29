@@ -36,25 +36,23 @@ export default function AddFriend() {
         data.append("public_id", cloudName);
         data.append('api_key', "813433467112589");
 
-        const res = await axios.post(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload` ,data)
-
-        return res;
+        return await axios.post(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload` ,data);
     }
 
     //추가 기능
     const addFriendBtn = async () => {
-        const datas:any = {
+        let datas:any = {
             img: image,
             username : nameRef.current?.value,
             birth: birthRef.current?.value,
             phone: numberRef.current?.value
         }
-        const addFriendApi = axios.post('/api/friends', datas)
+
+        await axios.post('/api/friends', datas)
         .then(res => {
             alert('친구 추가가 완료되었습니다.');
             router.push('/');
         })
-        console.log(datas)
     }
     return <>
     <Head>

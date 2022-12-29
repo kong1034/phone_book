@@ -1,13 +1,11 @@
 import classes from '../styles/home.module.scss';
 import Header from '../Layout/Header';
 import Head from 'next/head';
-import axios from 'axios';
 import MyProfileComponents from '../Components/MyProfileComponents';
 import FriendsComponents from '../Components/FriendsComponents';
-import { friends } from '../Interface/friends';
-import { myprofile } from '../Interface/myprofile';
 import { infodata } from '../Interface/infodata';
 import { PrismaClient } from '@prisma/client';
+import React from 'react';
 
 export default function Home({infodata}:{infodata:infodata}) {
   return <>
@@ -25,6 +23,8 @@ export default function Home({infodata}:{infodata:infodata}) {
     </section>
   </>
 }
+//파라미터 메모이징 => 리렌더링 최적화
+export const renderMemo = React.memo(Home); 
 //미리 렌더링
 export const getServerSideProps = async () => {
   let client = new PrismaClient();
