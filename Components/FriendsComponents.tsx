@@ -1,14 +1,18 @@
 import classes from '../styles/friends.module.scss';
 import Link from 'next/link';
-import {  useRef, useState } from 'react';
+import {  useEffect, useRef, useState } from 'react';
 import { friendsProps } from '../Interface/friendsProps';
 import { friends } from '../Interface/friends';
+import axios from 'axios';
+import { useRouter } from 'next/router';
 
 
 export default function FriendsComponents(arr:friendsProps) {
     const searchValue = useRef<HTMLInputElement>(null);
     const [checkSearch, setCheckSearch] = useState(false);
     const [search, setSearch] = useState<String>("");
+    const [list, setList] = useState(arr.vals);
+    const router = useRouter();
 
     //함수 정의
     //엔터 또는 백스페이스 입력 시
@@ -39,6 +43,22 @@ export default function FriendsComponents(arr:friendsProps) {
         })
         : setSearch("");
     }
+    //정보 삭제
+    const deleteInfo = (id:number) => {
+        axios.delete('/api/deleteFriends', {
+            data: {
+                id: id
+            }
+        })
+        .then(res => {
+            setList(res.data);
+            alert("삭제 완료되었습니다.");
+        })
+    }
+    // 정보 수정
+    const editInfo = async (id:number) => {
+        router.push({pathname:'/addFriend', query:{id: id}});
+    }
     //검색 인지 아닌지 판별
     if(checkSearch === true) {
         if(search !== "") {
@@ -50,7 +70,7 @@ export default function FriendsComponents(arr:friendsProps) {
                 </section>
                 <ul>
                     {
-                        arr.vals.map(item => (
+                        list.map(item => (
                             item.username == search ?
                             <li key={item.id}><Link href={`/friends/${item.id}`}><img src={item.img}/><h3>{item.username}</h3></Link></li>
                             : ""
@@ -68,7 +88,7 @@ export default function FriendsComponents(arr:friendsProps) {
                 </section>
                 <ul>
                     {
-                        arr.vals.map(item => (
+                        list.map(item => (
                             <li key={item.id}><Link href={`/friends/${item.id}`}><img src={item.img}/><h3>{item.username}</h3></Link></li>
                         ))
                     }
@@ -85,8 +105,16 @@ export default function FriendsComponents(arr:friendsProps) {
             </section>
             <ul>
                 {
-                    arr.vals.map((item:friends) => (
-                        <li key={item.id}><Link href={`/friends/${item.id}`}><img src={item.img}/><h3>{item.username}</h3></Link></li>
+                    list.map((item:friends) => (
+                        <li key={item.id}>
+                            <Link href={`/friends/${item.id}`}><img src={item.img}/><h3>{item.username}</h3></Link>
+                            <img onClick={() => {
+                                editInfo(item.id)
+                            }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9dRVvTc-PBFvPc4wXNJbHByXWWnezEm7Nf8mHJOo&s"></img>
+                            <img onClick={() => {
+                                deleteInfo(item.id)
+                            }} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2rkz-sGf9flCCImyopjkH_onJnhIoZ49zZoTGyA&s'></img>
+                        </li>
                     ))
                 }
             </ul>

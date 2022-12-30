@@ -7,12 +7,14 @@ import { useRouter } from "next/router";
 import Header from "../../Layout/Header";
 
 export default function AddFriend() {
+    const router = useRouter();
     const imgRef = useRef<HTMLInputElement>(null);
-    const [image, setImage] = useState("");
     const nameRef = useRef<HTMLInputElement>(null);
     const birthRef = useRef<HTMLInputElement>(null);
     const numberRef = useRef<HTMLInputElement>(null);
-    const router = useRouter();
+    const [image, setImage] = useState("");
+    const query = useState(router.query.id);
+    
 
     //input 파일버튼 대신 일반버튼 기능
     const imageUploadBtn = () => {
@@ -54,39 +56,46 @@ export default function AddFriend() {
             router.push('/');
         })
     }
+    const editFriendBtn = () => {
+        console.log('수정하기')
+    }
     return <>
-    <Head>
-        <title>add Friend</title>
-        <meta
-            name="add Friend"
-            content="you can add new friend"
-        />
-    </Head>
-    <section className={classes.container}>
-        <Header/>
-        <div className={classes.add_div}>
-            <div className={classes.img_div}>
-                <input type="file" accept="image/*" ref={imgRef} onChange={fileChange}/>
-                <img src={image} className={image ? "uploadedImg" : "noneImg"}></img>
-                <button onClick={imageUploadBtn}>이미지 업로드</button>
+        <Head>
+            <title>add Friend</title>
+            <meta
+                name="add Friend"
+                content="you can add new friend"
+            />
+        </Head>
+        <section className={classes.container}>
+            <Header/>
+            <div className={classes.add_div}>
+                <div className={classes.img_div}>
+                    <input type="file" accept="image/*" ref={imgRef} onChange={fileChange}/>
+                    <img src={image} className={image ? "uploadedImg" : "noneImg"}></img>
+                    <button onClick={imageUploadBtn}>이미지 업로드</button>
+                </div>
+                <div className={classes.info_div}>
+                    <p>
+                    <label htmlFor="name">이름</label>
+                    <input ref={nameRef} type='text'/>
+                    </p>
+                    <p>
+                    <label htmlFor="name">생년월일</label>
+                    <input ref={birthRef} className={classes.birth_input} type='select'/>
+                    </p>
+                    <p>
+                    <label htmlFor="name">번호</label>
+                    <input ref={numberRef} type='text'/>
+                    </p>
+                    {
+                        query === null ? 
+                        <button onClick={addFriendBtn}>추가하기</button>
+                        : <button onClick={editFriendBtn}>수정하기</button>
+                    }
+                    
+                </div>
             </div>
-            <div className={classes.info_div}>
-                <p>
-                <label htmlFor="name">이름</label>
-                <input ref={nameRef} type='text'/>
-                </p>
-                <p>
-                <label htmlFor="name">생년월일</label>
-                <input ref={birthRef} className={classes.birth_input} type='select'/>
-                </p>
-                <p>
-                <label htmlFor="name">번호</label>
-                <input ref={numberRef} type='text'/>
-                </p>
-
-                <button onClick={addFriendBtn}>추가하기</button>
-            </div>
-        </div>
-    </section>
+        </section>
     </>
 }

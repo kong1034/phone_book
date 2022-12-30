@@ -29,6 +29,17 @@
                     line-height: 30px;
                 }
             }
+            img {
+                width: 7%;
+                height: 30%;
+                margin: 25px 2px 0 2px;
+                cursor: pointer;
+
+                &:hover {
+                    transition: all ease-in 0.1s;
+                    opacity: 0.5;
+                }
+            }
         }
     }
 }
