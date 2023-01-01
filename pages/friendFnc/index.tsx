@@ -1,13 +1,13 @@
 import Head from "next/head"
 import { useEffect, useRef, useState } from "react"
-import classes from "../../styles/addfriend.module.scss"
+import classes from "../../styles/friendFnc.module.scss"
 import axios from "axios";
 import { Event } from "../../Interface/Event";
 import { useRouter } from "next/router";
 import Header from "../../Layout/Header";
 import { friends } from "../../Interface/friends";
 
-export default function AddFriend() {
+export default function FriendFnc() {
     const router = useRouter();
     const imgRef = useRef<HTMLInputElement>(null);
     const nameRef = useRef<HTMLInputElement>(null);
@@ -15,7 +15,7 @@ export default function AddFriend() {
     const numberRef = useRef<HTMLInputElement>(null);
     const [image, setImage] = useState("");
     const [friendInfo, setFriendInfo] = useState<friends>();
-
+    console.log(router.query.id);
     //input 파일버튼 대신 일반버튼 기능
     const imageUploadBtn = () => {
         imgRef.current?.click();
@@ -106,7 +106,7 @@ export default function AddFriend() {
                     <input ref={numberRef} type='text' placeholder={friendInfo ? friendInfo.phone : ""}/>
                     </p>
                     {
-                        router.query.id === null ? 
+                        router.query.id === undefined ? 
                         <button onClick={addFriendBtn}>추가하기</button>
                         : <button onClick={editFriendBtn}>수정하기</button>
                     }

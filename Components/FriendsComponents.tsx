@@ -57,7 +57,7 @@ export default function FriendsComponents(arr:friendsProps) {
     }
     // 정보 수정
     const editInfo = async (id:number) => {
-        router.push({pathname:'/addFriend', query:{id: id}});
+        router.push({pathname:'/friendFnc', query:{id: id}});
     }
     //검색 인지 아닌지 판별
     if(checkSearch === true) {
