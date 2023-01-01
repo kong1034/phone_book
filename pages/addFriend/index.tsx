@@ -1,10 +1,11 @@
 import Head from "next/head"
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import classes from "../../styles/addfriend.module.scss"
 import axios from "axios";
 import { Event } from "../../Interface/Event";
 import { useRouter } from "next/router";
 import Header from "../../Layout/Header";
+import { friends } from "../../Interface/friends";
 
 export default function AddFriend() {
     const router = useRouter();
@@ -13,8 +14,7 @@ export default function AddFriend() {
     const birthRef = useRef<HTMLInputElement>(null);
     const numberRef = useRef<HTMLInputElement>(null);
     const [image, setImage] = useState("");
-    const query = useState(router.query.id);
-    
+    const [friendInfo, setFriendInfo] = useState<friends>();
 
     //input 파일버튼 대신 일반버튼 기능
     const imageUploadBtn = () => {
@@ -56,8 +56,25 @@ export default function AddFriend() {
             router.push('/');
         })
     }
+
+    //수정시 친구 정보 가져오기
+    useEffect(() => {
+        if(router.query.id !== undefined) {
+            axios.get(`/api/${router.query.id}`)
+            .then(res => setFriendInfo(res.data));
+        }
+    }, [router.query.id])
+
+    //수정기능
     const editFriendBtn = () => {
-        console.log('수정하기')
+        axios.put('/api/friends',{
+            id: router.query.id,
+            img: image,
+            username : nameRef.current?.value,
+            birth: birthRef.current?.value,
+            phone: numberRef.current?.value
+        })
+        .then(res => router.push('/'));
     }
     return <>
         <Head>
@@ -72,24 +89,24 @@ export default function AddFriend() {
             <div className={classes.add_div}>
                 <div className={classes.img_div}>
                     <input type="file" accept="image/*" ref={imgRef} onChange={fileChange}/>
-                    <img src={image} className={image ? "uploadedImg" : "noneImg"}></img>
+                    <img src={ friendInfo && image === "" ? friendInfo.img : image} className={image ? "uploadedImg" : "noneImg"}></img>
                     <button onClick={imageUploadBtn}>이미지 업로드</button>
                 </div>
                 <div className={classes.info_div}>
                     <p>
                     <label htmlFor="name">이름</label>
-                    <input ref={nameRef} type='text'/>
+                    <input ref={nameRef} type='text' placeholder={friendInfo ? friendInfo.username : ""}/>
                     </p>
                     <p>
                     <label htmlFor="name">생년월일</label>
-                    <input ref={birthRef} className={classes.birth_input} type='select'/>
+                    <input ref={birthRef} className={classes.birth_input} type='select' placeholder={friendInfo ? friendInfo.birth : ""}/>
                     </p>
                     <p>
                     <label htmlFor="name">번호</label>
-                    <input ref={numberRef} type='text'/>
+                    <input ref={numberRef} type='text' placeholder={friendInfo ? friendInfo.phone : ""}/>
                     </p>
                     {
-                        query === null ? 
+                        router.query.id === null ? 
                         <button onClick={addFriendBtn}>추가하기</button>
                         : <button onClick={editFriendBtn}>수정하기</button>
                     }

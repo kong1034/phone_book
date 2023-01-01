@@ -17,5 +17,18 @@ export default async function handler(
         where:req.body
       })
       return res.status(200).json("삭제 완료");
-  } 
+  } else if(req.method === 'PUT') {
+    await client.friends.update({
+      where: {
+        id: Number(req.body.id),
+      },
+      data : {
+        img: req.body.img,
+        username : req.body.username,
+        birth: req.body.birth,
+        phone: req.body.phone
+      }
+    })
+    return res.status(200).json("수정 완료");
+  }
 }
