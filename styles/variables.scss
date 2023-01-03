@@ -1,0 +1,54 @@
+/* xxs size */
+$xxs : 376px;
+/* xs size */
+$xs : 377px;
+/* s size */
+$s : 576px;
+/* m size */
+$m : 768px;
+/* l size */
+$l : 992px;
+/* xl size */
+$xl : 1200px;
+/* xxl size */
+$xxl : 1400px;
+
+@mixin breakpoint($point) {
+    @if $point == xxs {
+        @media (max-width: $xxs) {
+            @content;
+        }
+    } @else if $point == xs {
+        @media (min-width: $xs) {
+            @content;
+        }
+    } @else if $point == s {
+        @media (min-width: $xs) {
+            @content;
+        }
+    } @else if $point == m {
+        @media (min-width: $m) {
+            @content;
+        }
+    } @else if $point == l {
+        @media (min-width: $l) {
+            @content;
+        }
+    } @else if $point == xl {
+        @media (min-width: $xl) {
+            @content;
+        }
+    } @else if $point == xxl {
+        @media (min-width: $xxl) {
+            @content;
+        }
+    } @else if $point == 'surfaceDuo' {
+        @media (min-width: $xs) and (max-width: $s) and (height: 720px) {
+            @content;
+        }
+    } @else if $point == 'fold' {
+        @media (max-width: $xxs) and (height: 653px) {
+            @content;
+        }
+    }
+}
