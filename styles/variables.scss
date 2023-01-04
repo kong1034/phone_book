@@ -50,9 +50,5 @@ $xxl : 1400px;
         @media (max-width: $xxs) and (height: 653px) {
             @content;
         }
-    } @else if $point == $s+'landscape' {
-        @media (min-width: $s) and (orientation:landscape) {
-            @content;
-        }
     }
 }

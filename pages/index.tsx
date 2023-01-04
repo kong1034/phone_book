@@ -15,8 +15,6 @@ export default function Home({infodata}:{infodata:infodata}) {
       name="description"
       content="add, delete, update your friends in the PhoneBook"
     />
-
-
   </Head>
     <section className={classes.container}>
       <Header/>
