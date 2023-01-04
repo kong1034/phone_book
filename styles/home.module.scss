@@ -3,7 +3,7 @@
 @include breakpoint(xxs) {
     .container {
         width:100vw;
-        height: calc(102vh - 5vw);
+        height: 100vh;
         border: 3px solid #ffb020;
         margin: 0 auto;
     }
@@ -12,7 +12,7 @@
 @include breakpoint(xs) {
     .container {
         width:100vw;
-        height: calc(102vh - 5vw);
+        height: 100vh;
         border: 3px solid #ffb020;
         margin: 0 auto;
     }
@@ -21,7 +21,7 @@
 @include breakpoint(s) {
     .container {
         width:100vw;
-        height: calc(109vh - 5vw);
+        height: 100vh;
         border-radius: 10px;
         border: 3px solid #22893c;
         margin: 0 auto;
@@ -31,7 +31,7 @@
 @include breakpoint(m) {
     .container {
         width:100vw;
-        height: calc(111vh - 5vw);
+        height: 100vh;
         border-radius: 10px;
         border: 3px solid #321397;
         margin: 0 auto;
@@ -67,76 +67,3 @@
         margin: 0 auto;
     }
 }
-
-/* 가로모드 */
-// @include breakpoint(xxs, "landscape") {
-//     .container {
-//         width:100vw;
-//         height: calc(102vh - 5vw);
-//         border: 3px solid #ffb020;
-//         margin: 0 auto;
-//     }
-// }
-
-// @include breakpoint(xs, "landscape") {
-//     .container {
-//         width:100vw;
-//         height: calc(102vh - 5vw);
-//         border: 3px solid #ffb020;
-//         margin: 0 auto;
-//     }
-// }
-
-// @include breakpoint(s, "landscape") {
-//     .container {
-//         width:100vw;
-//         height: calc(102vh - 5vw);
-//         border: 3px solid #ffb020;
-//         margin: 0 auto;
-//     }
-// }
-
-// @include breakpoint(m, "landscape") {
-//     .container {
-//         width:100vw;
-//         height: calc(102vh - 5vw);
-//         border: 3px solid #ffb020;
-//         margin: 0 auto;
-//     }
-// }
-
-// @include breakpoint(l, "landscape") {
-//     .container {
-//         width:100vw;
-//         height: calc(102vh - 5vw);
-//         border: 3px solid #ffb020;
-//         margin: 0 auto;
-//     }
-// }
-
-// @include breakpoint(xl, "landscape") {
-//     .container {
-//         width:100vw;
-//         height: calc(102vh - 5vw);
-//         border: 3px solid #ffb020;
-//         margin: 0 auto;
-//     }
-// }
-
-// @include breakpoint(xxl, "landscape") {
-//     .container {
-//         width:100vw;
-//         height: calc(102vh - 5vw);
-//         border: 3px solid #ffb020;
-//         margin: 0 auto;
-//     }
-// }
-
-// @include breakpoint(xxs, "landscape") {
-//     .container {
-//         width:100vw;
-//         height: calc(102vh - 5vw);
-//         border: 3px solid #ffb020;
-//         margin: 0 auto;
-//     }
-// }
