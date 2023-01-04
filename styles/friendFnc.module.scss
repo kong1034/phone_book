@@ -1,42 +1,469 @@
-.container {
-    width:30vw;
-    height: 80vh;
-    border-radius: 10px;
-    border: 3px solid #ffb020;
-    margin: 0 auto;
-    .add_div {
-        margin: 3vw auto;
-        width: 300px;
-        height: 450px;
-        .img_div {
-            height: 250px;
-            input {
-                display: none;
-            }
-            img{
-                margin: 0 48px 0 48px;
-            }
-            img.noneImg {
-                display: none;
-            }
-            button {
-                margin: 30px 100px 0 100px;
-            }
-        }
-        .info_div {
-            border: 2px solid #ffb020;
-            border-radius: 10px;
-            input {
-                width: 200px;
-                margin-left: 40px;
-            }
-            .birth_input {
-                margin-left:0.8vw;
-            }
+@import "./variables.scss";
 
-            button {
-                margin: 20px 110px 0 110px;
+/* 세로모드 */
+@include breakpoint(xxs) {
+    .container {
+        width:100vw;
+        height: 100vh;
+        border-radius: 10px;
+        border: 3px solid #ffb020;
+        margin: 0 auto;
+        .add_div {
+            margin: 3vw auto;
+            width: 300px;
+            height: 450px;
+            .img_div {
+                height: 45vh;
+                input {
+                    display: none;
+                }
+                img{
+                    width: 50%;
+                    height: 60%;
+                    margin: 0 20vw 0 20vw;
+                }
+                img.noneImg {
+                    display: none;
+                }
+                button {
+                    margin: 30px 100px 0 100px;
+                }
+            }
+            .info_div {
+                border: 2px solid #ffb020;
+                border-radius: 10px;
+                input {
+                    width: 200px;
+                    margin-left: 40px;
+                }
+                .birth_input {
+                    margin-left:3.3vw;
+                }
+
+                button {
+                    margin: 20px 110px 0 110px;
+                }
             }
         }
     }
 }
+
+@include breakpoint(xs) {
+    .container {
+        width:100vw;
+        height: 100vh;
+        border-radius: 10px;
+        border: 3px solid #ffb020;
+        margin: 0 auto;
+        .add_div {
+            margin: 3vw auto;
+            width: 300px;
+            height: 450px;
+            .img_div {
+                height: 45vh;
+                input {
+                    display: none;
+                }
+                img{
+                    width: 50%;
+                    height: 60%;
+                    margin: 0 20vw 0 20vw;
+                }
+                img.noneImg {
+                    display: none;
+                }
+                button {
+                    margin: 30px 100px 0 100px;
+                }
+            }
+            .info_div {
+                border: 2px solid #ffb020;
+                border-radius: 10px;
+                input {
+                    width: 200px;
+                    margin-left: 40px;
+                }
+                .birth_input {
+                    margin-left:3.3vw;
+                }
+
+                button {
+                    margin: 20px 110px 0 110px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(s) {
+    .container {
+        width:100vw;
+        height: 100vh;
+        border-radius: 10px;
+        border: 3px solid #ffb020;
+        margin: 0 auto;
+        .add_div {
+            margin: 3vw auto;
+            width: 100%;
+            height: 80%;
+            .img_div {
+                height: 45vh;
+                margin: 0 7vw 0 7vw;
+                input {
+                    display: none;
+                }
+                img{
+                    width: 50%;
+                    height: 60%;
+                    margin: 5vh 22vw 0 22vw;
+                }
+                img.noneImg {
+                    display: none;
+                }
+                button {
+                    margin: 3vh 31vw 0 31vw;
+                    height: 3vh;
+                    width: 25vw;
+                }
+            }
+            .info_div {
+                border: 2px solid #ffb020;
+                border-radius: 10px;
+                width: 100vw;
+                height: 30vh;
+                font-size: 6vw;
+                input {
+                    width: 70vw;
+                    margin-left: 15vw;
+                    height: 4vh;
+                    font-size: 20px;
+                }
+                .birth_input {
+                    margin-left:5vw;
+                    font-size: 20px;
+                }
+
+                button {
+                    margin: 3vh 42vw 0 42vw;
+                    height: 3vh;
+                    width: 20vw;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(m) {
+    .container {
+        width:100vw;
+        height: 104vh;
+        border-radius: 10px;
+        border: 3px solid #ffb020;
+        margin: 0 auto;
+        .add_div {
+            margin: 0 auto;
+            width: 100%;
+            height: 85%;
+            border: 1px solid black;
+            .img_div {
+                height: 45vh;
+                margin: 0 7vw 0 7vw;
+                input {
+                    display: none;
+                }
+                img{
+                    width: 50%;
+                    height: 60%;
+                    margin: 5vh 22vw 0 22vw;
+                }
+                img.noneImg {
+                    display: none;
+                }
+                button {
+                    margin: 3vh 31vw 0 31vw;
+                    height: 3vh;
+                    width: 25vw;
+                }
+            }
+            .info_div {
+                border: 2px solid #ffb020;
+                border-radius: 10px;
+                width: 95vw;
+                height: 30vh;
+                font-size: 4vw;
+                margin: 0 2vw 0 2vw;
+                input {
+                    width: 70vw;
+                    margin-left: 15vw;
+                    height: 4vh;
+                    font-size: 20px;
+                }
+                .birth_input {
+                    margin-left:8vw;
+                    font-size: 20px;
+                }
+                button {
+                    margin: 1vh 42vw 0 42vw;
+                    height: 3vh;
+                    width: 20vw;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(l) {
+    .info_border {
+        width: 100%;
+        height: 59vh;
+        margin: 1vw auto;
+        div {
+            margin: 2vh 0 0 0vw;
+            padding-left: 1vw;
+            font-size: 8vw;
+            line-height: 5vw;
+            height: 5vh;
+        }
+    
+        .fnc_border {
+            width: 100%;
+            height: 11vw;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30vh;
+            .img_box {
+                width: 70px;
+                height: 70px;
+                margin-top: 3vw;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(xl) {
+    .info_border {
+        width: 100%;
+        height: 59vh;
+        margin: 1vw auto;
+        div {
+            margin: 2vh 0 0 0vw;
+            padding-left: 1vw;
+            font-size: 8vw;
+            line-height: 5vw;
+            height: 5vh;
+        }
+    
+        .fnc_border {
+            width: 100%;
+            height: 11vw;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30vh;
+            .img_box {
+                width: 70px;
+                height: 70px;
+                margin-top: 3vw;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(xxl) {
+    .info_border {
+        width: 100%;
+        height: 59vh;
+        margin: 1vw auto;
+        div {
+            margin: 2vh 0 0 0vw;
+            padding-left: 1vw;
+            font-size: 8vw;
+            line-height: 5vw;
+            height: 5vh;
+        }
+    
+        .fnc_border {
+            width: 100%;
+            height: 11vw;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30vh;
+            .img_box {
+                width: 70px;
+                height: 70px;
+                margin-top: 3vw;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint('surfaceDuo') {
+    .container {
+        width:100vw;
+        height: 107vh;
+        border-radius: 10px;
+        border: 3px solid #ffb020;
+        margin: 0 auto;
+        .add_div {
+            margin: 0 auto;
+            width: 100%;
+            height: 85%;
+            .img_div {
+                height: 45vh;
+                margin: 0 7vw 0 7vw;
+                input {
+                    display: none;
+                }
+                img{
+                    width: 50%;
+                    height: 60%;
+                    margin: 5vh 22vw 0 22vw;
+                }
+                img.noneImg {
+                    display: none;
+                }
+                button {
+                    margin: 3vh 31vw 0 31vw;
+                    height: 3vh;
+                    width: 25vw;
+                }
+            }
+            .info_div {
+                border: 2px solid #ffb020;
+                border-radius: 10px;
+                width: 95vw;
+                height: 30vh;
+                font-size: 4vw;
+                margin: 0 2vw 0 2vw;
+                input {
+                    width: 70vw;
+                    margin-left: 15vw;
+                    height: 4vh;
+                    font-size: 20px;
+                }
+                .birth_input {
+                    margin-left:8vw;
+                    font-size: 20px;
+                }
+                button {
+                    margin: 1vh 38vw 0 38vw;
+                    height: 3vh;
+                    width: 20vw;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint('fold') {
+    .container {
+        width:100vw;
+        height: 100vh;
+        border-radius: 10px;
+        border: 3px solid #ffb020;
+        margin: 0 auto;
+        .add_div {
+            margin: 0 auto;
+            width: 100%;
+            height: 85%;
+            border: 1px solid black;
+            .img_div {
+                height: 45vh;
+                margin: 0 7vw 0 7vw;
+                input {
+                    display: none;
+                }
+                img{
+                    width: 50%;
+                    height: 60%;
+                    margin: 5vh 22vw 0 22vw;
+                }
+                img.noneImg {
+                    display: none;
+                }
+                button {
+                    margin: 3vh 25vw 0 25vw;
+                    height: 3vh;
+                    width: 35vw;
+                }
+            }
+            .info_div {
+                border: 2px solid #ffb020;
+                border-radius: 10px;
+                width: 95vw;
+                height: 30vh;
+                font-size: 4vw;
+                margin: 0 2vw 0 2vw;
+                input {
+                    width: 70vw;
+                    margin-left: 15vw;
+                    height: 4vh;
+                    font-size: 20px;
+                }
+                .birth_input {
+                    margin-left:8vw;
+                    font-size: 20px;
+                }
+                button {
+                    margin: 1vh 35vw 0 35vw;
+                    height: 3vh;
+                    width: 25vw;
+                }
+            }
+        }
+    }
+}
+
+// .container {
+//     width:30vw;
+//     height: 80vh;
+//     border-radius: 10px;
+//     border: 3px solid #ffb020;
+//     margin: 0 auto;
+//     .add_div {
+//         margin: 3vw auto;
+//         width: 300px;
+//         height: 450px;
+//         .img_div {
+//             height: 250px;
+//             input {
+//                 display: none;
+//             }
+//             img{
+//                 margin: 0 48px 0 48px;
+//             }
+//             img.noneImg {
+//                 display: none;
+//             }
+//             button {
+//                 margin: 30px 100px 0 100px;
+//             }
+//         }
+//         .info_div {
+//             border: 2px solid #ffb020;
+//             border-radius: 10px;
+//             input {
+//                 width: 200px;
+//                 margin-left: 40px;
+//             }
+//             .birth_input {
+//                 margin-left:0.8vw;
+//             }
+
+//             button {
+//                 margin: 20px 110px 0 110px;
+//             }
+//         }
+//     }
+// }
