@@ -8,6 +8,7 @@ import { PrismaClient } from '@prisma/client';
 import React from 'react';
 
 export default function Home({infodata}:{infodata:infodata}) {
+  screen.orientation.lock('portrait');
   return <>
   <Head>
     <title>PhoneBook</title>
