@@ -5,15 +5,9 @@ import MyProfileComponents from '../Components/MyProfileComponents';
 import FriendsComponents from '../Components/FriendsComponents';
 import { infodata } from '../Interface/infodata';
 import { PrismaClient } from '@prisma/client';
-import React, { useEffect } from 'react';
+import React from 'react';
 
 export default function Home({infodata}:{infodata:infodata}) {
-  useEffect(() => {
-    window.addEventListener('resize', () => {
-      screen.orientation.lock('portrait')
-      .then(res => console.log('가로모드 금지'));
-    })
-  }, [])
   return <>
   <Head>
     <title>PhoneBook</title>
@@ -21,11 +15,16 @@ export default function Home({infodata}:{infodata:infodata}) {
       name="description"
       content="add, delete, update your friends in the PhoneBook"
     />
+
+
   </Head>
     <section className={classes.container}>
       <Header/>
       <MyProfileComponents vals = {infodata.myprofile}/>
       <FriendsComponents vals = {infodata.friends}/>
+    </section>
+    <section className={classes.landscape}>
+      <h3>가로모드는 지원하지 않습니다.</h3>
     </section>
   </>
 }
