@@ -5,10 +5,15 @@ import MyProfileComponents from '../Components/MyProfileComponents';
 import FriendsComponents from '../Components/FriendsComponents';
 import { infodata } from '../Interface/infodata';
 import { PrismaClient } from '@prisma/client';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export default function Home({infodata}:{infodata:infodata}) {
-  screen.orientation.lock('portrait');
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      screen.orientation.lock('portrait')
+      .then(res => console.log('가로모드 금지'));
+    })
+  }, [])
   return <>
   <Head>
     <title>PhoneBook</title>
