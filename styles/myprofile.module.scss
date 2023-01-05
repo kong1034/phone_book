@@ -1,6 +1,6 @@
 @import "./variables.scss";
 
-@include breakpoint(xxs) {
+@include breakpoint(xxs+'orien') {
     .profile {
         margin: 0 auto;
         width: 100%;
@@ -29,7 +29,7 @@
     }
 }
 
-@include breakpoint(xs) {
+@include breakpoint(xs+'orien') {
     .profile {
         margin: 0 auto;
         width: 100%;
@@ -58,7 +58,7 @@
     }
 }
 
-@include breakpoint(s) {
+@include breakpoint(s+'orien') {
     .profile {
         margin: 0 auto;
         width: 100vw;
@@ -88,7 +88,7 @@
     }
 }
 
-@include breakpoint(m) {
+@include breakpoint(m+'orien') {
     .profile {
         margin: 0 auto;
         width: 100%;
@@ -118,7 +118,7 @@
     }
 }
 
-@include breakpoint("surfaceDuo") {
+@include breakpoint("surfaceDuo+orien") {
     .profile {
         margin: 0 auto;
         width: 100%;
@@ -148,7 +148,7 @@
     }
 }
 
-@include breakpoint("fold") {
+@include breakpoint("fold+orien") {
     .profile {
         margin: 0 auto;
         width: 100vw;

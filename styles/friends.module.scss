@@ -1,6 +1,6 @@
 @import "./variables.scss";
 
-@include breakpoint(xxs) {
+@include breakpoint(xxs+'orien') {
     .friends_boder {
         width: 100%;
         height: 58%;
@@ -68,7 +68,7 @@
     }
 }
 
-@include breakpoint(xs) {
+@include breakpoint(xs+'orien') {
     .friends_boder {
         width: 100%;
         height: 58%;
@@ -136,7 +136,7 @@
     }
 }
 
-@include breakpoint(s) {
+@include breakpoint(s+'orien') {
     .friends_boder {
         width: 100%;
         height: 60%;
@@ -205,7 +205,7 @@
     }
 }
 
-@include breakpoint(m) {
+@include breakpoint(m+'orien') {
     .friends_boder {
         width: 100%;
         height: 60vh;
@@ -276,7 +276,7 @@
     }
 }
 
-@include breakpoint("surfaceDuo") {
+@include breakpoint("surfaceDuo+orien") {
     .friends_boder {
         width: 100%;
         height: 59vh;
@@ -347,7 +347,7 @@
     }
 }
 
-@include breakpoint("fold") {
+@include breakpoint("fold+orien") {
     .friends_boder {
         width: 100%;
         height: 60vh;

@@ -13,42 +13,56 @@ $xl : 1200px;
 /* xxl size */
 $xxl : 1400px;
 
+//세로
 @mixin breakpoint($point) {
-    @if $point == xxs {
-        @media (max-width: $xxs) {
+    @if $point == xxs+"orien" {
+        @media (max-width: $xxs) and (orientation:portrait) {
             @content;
         }
-    } @else if $point == xs {
-        @media (min-width: $xs) {
+    } @else if $point == xs+"orien" {
+        @media (min-width: $xs) and (orientation:portrait) {
             @content;
         }
-    } @else if $point == s {
-        @media (min-width: $xs) {
+    } @else if $point == s+"orien" {
+        @media (min-width: $xs) and (orientation:portrait) {
             @content;
         }
-    } @else if $point == m {
-        @media (min-width: $m) {
+    } @else if $point == m+"orien" {
+        @media (min-width: $m) and (orientation:portrait) {
             @content;
         }
-    } @else if $point == l {
-        @media (min-width: $l) {
+    } @else if $point == l+"orien" {
+        @media (min-width: $l) and (orientation:portrait) {
             @content;
         }
-    } @else if $point == xl {
-        @media (min-width: $xl) {
+    } @else if $point == xl+"orien" {
+        @media (min-width: $xl) and (orientation:portrait) {
             @content;
         }
-    } @else if $point == xxl {
-        @media (min-width: $xxl) {
+    } @else if $point == xxl+"orien" {
+        @media (min-width: $xxl) and (orientation:portrait) {
             @content;
         }
-    } @else if $point == 'surfaceDuo' {
-        @media (min-width: $xs) and (max-width: $s) and (height: 720px) {
+    } @else if $point == 'surfaceDuo+orien' {
+        @media (min-width: $xs) and (max-width: $s) and (height: 720px) and (orientation:portrait) {
             @content;
         }
-    } @else if $point == 'fold' {
-        @media (max-width: $xxs) and (height: 653px) {
+    } @else if $point == 'fold+orien' {
+        @media (max-width: $xxs) and (height: 653px) and (orientation:portrait) {
             @content;
         }
+    }
+}
+
+//가로
+@mixin landscape($point) {
+    @if $point == s+'land' {
+        @media (min-width: $s)and (orientation:landscape) {
+            @content;
+        } 
+    } @else if $point == m+"land" {
+        @media (min-width: $m) and (orientation:landscape) {
+            @content;
+        } 
     }
 }

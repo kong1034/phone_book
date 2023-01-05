@@ -21,9 +21,6 @@ export default function Home({infodata}:{infodata:infodata}) {
       <MyProfileComponents vals = {infodata.myprofile}/>
       <FriendsComponents vals = {infodata.friends}/>
     </section>
-    <section className={classes.landscape}>
-      <h3>가로모드는 지원하지 않습니다.</h3>
-    </section>
   </>
 }
 //파라미터 메모이징 => 리렌더링 최적화

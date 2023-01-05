@@ -1,7 +1,7 @@
 @import "./variables.scss";
 
 /* 세로모드 */
-@include breakpoint(xxs) {
+@include breakpoint(xxs+'orien') {
     .info_border {
         width: 100%;
         height: 59vh;
@@ -33,7 +33,7 @@
     }
 }
 
-@include breakpoint(xs) {
+@include breakpoint(xs+'orien') {
     .info_border {
         width: 100%;
         height: 59vh;
@@ -65,7 +65,7 @@
     }
 }
 
-@include breakpoint(s) {
+@include breakpoint(s+'orien') {
     .info_border {
         width: 100%;
         height: 59vh;
@@ -97,7 +97,7 @@
     }
 }
 
-@include breakpoint(m) {
+@include breakpoint(m+'orien') {
     .info_border {
         width: 100%;
         height: 59vh;
@@ -129,7 +129,7 @@
     }
 }
 
-@include breakpoint(l) {
+@include breakpoint(l+'orien') {
     .info_border {
         width: 100%;
         height: 59vh;
@@ -161,7 +161,7 @@
     }
 }
 
-@include breakpoint(xl) {
+@include breakpoint(xl+'orien') {
     .info_border {
         width: 100%;
         height: 59vh;
@@ -193,7 +193,7 @@
     }
 }
 
-@include breakpoint(xxl) {
+@include breakpoint(xxl+'orien') {
     .info_border {
         width: 100%;
         height: 59vh;
@@ -225,7 +225,7 @@
     }
 }
 
-@include breakpoint('surfaceDuo') {
+@include breakpoint('surfaceDuo+orien') {
     .info_border {
         width: 100%;
         height: 59vh;
@@ -257,7 +257,7 @@
     }
 }
 
-@include breakpoint('fold') {
+@include breakpoint('fold+orien') {
     .info_border {
         width: 100%;
         height: 59vh;
