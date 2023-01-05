@@ -15,7 +15,7 @@ export default function FriendFnc() {
     const numberRef = useRef<HTMLInputElement>(null);
     const [image, setImage] = useState("");
     const [friendInfo, setFriendInfo] = useState<friends>();
-    console.log(router.query.id);
+    
     //input 파일버튼 대신 일반버튼 기능
     const imageUploadBtn = () => {
         imgRef.current?.click();
@@ -89,7 +89,13 @@ export default function FriendFnc() {
             <div className={classes.add_div}>
                 <div className={classes.img_div}>
                     <input type="file" accept="image/*" ref={imgRef} onChange={fileChange}/>
-                    <img src={ friendInfo && image === "" ? friendInfo.img : image} className={image ? "uploadedImg" : "noneImg"}></img>
+                    {
+                        friendInfo !== undefined ?
+                        <img src={friendInfo.img}/>
+                        : image !== "" ?
+                        <img src={image}/>
+                        : ""
+                    }
                     <button onClick={imageUploadBtn}>이미지 업로드</button>
                 </div>
                 <div className={classes.info_div}>

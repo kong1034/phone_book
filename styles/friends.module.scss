@@ -3,7 +3,7 @@
 @include breakpoint(xxs) {
     .friends_boder {
         width: 100%;
-        height: 340px;
+        height: 58%;
         overflow-y: auto;
         ul {
             padding: 0;
@@ -54,13 +54,13 @@
         margin: 2vw 0;
         .img {
             width: 10%;
-            height: 100%;
+            height: 80%;
         }
         .img:hover {
             cursor: pointer;
         }
         .input {
-            height: 100%;
+            height: 80%;
             width: 80%;
             font-size: 20px;
             margin: 0 3.5vw;
@@ -71,7 +71,7 @@
 @include breakpoint(xs) {
     .friends_boder {
         width: 100%;
-        height: 340px;
+        height: 58%;
         overflow-y: auto;
         ul {
             padding: 0;
@@ -122,13 +122,13 @@
         margin: 2vw 0;
         .img {
             width: 10%;
-            height: 100%;
+            height: 80%;
         }
         .img:hover {
             cursor: pointer;
         }
         .input {
-            height: 100%;
+            height: 80%;
             width: 80%;
             font-size: 20px;
             margin: 0 3.5vw;
@@ -139,7 +139,7 @@
 @include breakpoint(s) {
     .friends_boder {
         width: 100%;
-        height: 340px;
+        height: 60%;
         overflow-y: auto;
         ul {
             padding: 0;
@@ -191,15 +191,15 @@
         margin: 3vw 0;
         .img {
             width: 10%;
-            height: 100%;
+            height: 80%;
         }
         .img:hover {
             cursor: pointer;
         }
         .input {
-            height: 100%;
+            height: 80%;
             width: 80%;
-            font-size: 20px;
+            font-size: 30px;
             margin: 0 3vw;
         }
     }
@@ -279,7 +279,7 @@
 @include breakpoint("surfaceDuo") {
     .friends_boder {
         width: 100%;
-        height: 60vh;
+        height: 59vh;
         overflow-y: auto;
         ul {
             padding: 0;
