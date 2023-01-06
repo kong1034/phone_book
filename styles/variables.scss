@@ -57,31 +57,31 @@ $xxl : 1400px;
 //가로
 @mixin landscape($point) {
     @if $point == s+'land' {
-        @media only screen and (min-device-width: $s)and (orientation:landscape) and (hover:none) and (pointer:coarse) {
+        @media (min-device-width: $s)and (orientation:landscape) and (hover:none) and (pointer:coarse) {
             @content;
         } 
     } @else if $point == m+"land" {
-        @media only screen and (min-device-width: $m) and (orientation:landscape) and (hover:none) and (pointer:coarse) {
+        @media (min-device-width: $m) and (orientation:landscape) and (hover:none) and (pointer:coarse) {
             @content;
         } 
     } @else if $point == l+"land" {
-        @media only screen and (min-device-width: $l) and (orientation:landscape) and (hover:none) and (pointer:coarse) {
+        @media (min-device-width: $l) and (orientation:landscape) and (hover:none) and (pointer:coarse) {
             @content;
         } 
     } @else if $point == xl+"land" {
-        @media only screen and (min-device-width: $xl) and (orientation:landscape) and (hover:none) and (pointer:coarse) {
+        @media (min-device-width: $xl) and (orientation:landscape) and (hover:none) and (pointer:coarse) {
             @content;
         } 
     } @else if $point == xxl+"land" {
-        @media only screen and (min-device-width: $xxl) and (orientation:landscape) and (hover:none) and (pointer:coarse) {
+        @media (min-device-width: $xxl) and (orientation:landscape) and (hover:none) and (pointer:coarse) {
             @content;
         } 
     } @else if $point == "surfaceland" {
-        @media only screen and (width: 720px) and (height: 540px) and (hover:none) and (pointer:coarse) {
+        @media (width: 720px) and (height: 540px) and (hover:none) and (pointer:coarse) {
             @content;
         } 
     } @else if $point == "foldland" {
-        @media only screen and (width: 653px) and (height: 280px) and (hover:none) and (pointer:coarse) {
+        @media (width: 653px) and (height: 280px) and (hover:none) and (pointer:coarse) {
             @content;
         } 
     }
