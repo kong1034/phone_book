@@ -16,39 +16,39 @@ $xxl : 1400px;
 //세로
 @mixin breakpoint($point) {
     @if $point == xxs+"orien" {
-        @media (max-width: $xxs) and (orientation:portrait) {
+        @media only screen and (max-device-width: $xxs) and (orientation:portrait) and (hover:none) and (pointer:coarse){
             @content;
         }
     } @else if $point == xs+"orien" {
-        @media (min-width: $xs) and (orientation:portrait) {
+        @media only screen and (min-device-width: $xs) and (orientation:portrait) and (hover:none) and (pointer:coarse) {
             @content;
         }
     } @else if $point == s+"orien" {
-        @media (min-width: $xs) and (orientation:portrait) {
+        @media only screen and (min-device-width: $xs) and (orientation:portrait) and (hover:none) and (pointer:coarse) {
             @content;
         }
     } @else if $point == m+"orien" {
-        @media (min-width: $m) and (orientation:portrait) {
+        @media only screen and (min-device-width: $m) and (orientation:portrait) and (hover:none) and (pointer:coarse) {
             @content;
         }
     } @else if $point == l+"orien" {
-        @media (min-width: $l) and (orientation:portrait) {
+        @media only screen and (min-device-width: $l) and (orientation:portrait) and (hover:none) and (pointer:coarse) {
             @content;
         }
     } @else if $point == xl+"orien" {
-        @media (min-width: $xl) and (orientation:portrait) {
+        @media only screen and (min-device-width: $xl) and (orientation:portrait) and (hover:none) and (pointer:coarse) {
             @content;
         }
     } @else if $point == xxl+"orien" {
-        @media (min-width: $xxl) and (orientation:portrait) {
+        @media only screen and (min-device-width: $xxl) and (orientation:portrait) and (hover:none) and (pointer:coarse) {
             @content;
         }
     } @else if $point == 'surfaceDuo+orien' {
-        @media (min-width: $xs) and (max-width: $s) and (height: 720px) and (orientation:portrait) {
+        @media only screen and (min-device-width: $xs) and (max-width: $s) and (height: 720px) and (orientation:portrait) and (hover:none) and (pointer:coarse) {
             @content;
         }
     } @else if $point == 'fold+orien' {
-        @media (max-width: $xxs) and (height: 653px) and (orientation:portrait) {
+        @media only screen and (max-device-width: $xxs) and (height: 653px) and (orientation:portrait) and (hover:none) and (pointer:coarse) {
             @content;
         }
     }
@@ -57,11 +57,31 @@ $xxl : 1400px;
 //가로
 @mixin landscape($point) {
     @if $point == s+'land' {
-        @media (min-width: $s)and (orientation:landscape) {
+        @media only screen and (min-device-width: $s)and (orientation:landscape) and (hover:none) and (pointer:coarse) {
             @content;
         } 
     } @else if $point == m+"land" {
-        @media (min-width: $m) and (orientation:landscape) {
+        @media only screen and (min-device-width: $m) and (orientation:landscape) and (hover:none) and (pointer:coarse) {
+            @content;
+        } 
+    } @else if $point == l+"land" {
+        @media only screen and (min-device-width: $l) and (orientation:landscape) and (hover:none) and (pointer:coarse) {
+            @content;
+        } 
+    } @else if $point == xl+"land" {
+        @media only screen and (min-device-width: $xl) and (orientation:landscape) and (hover:none) and (pointer:coarse) {
+            @content;
+        } 
+    } @else if $point == xxl+"land" {
+        @media only screen and (min-device-width: $xxl) and (orientation:landscape) and (hover:none) and (pointer:coarse) {
+            @content;
+        } 
+    } @else if $point == "surfaceland" {
+        @media only screen and (width: 720px) and (height: 540px) and (hover:none) and (pointer:coarse) {
+            @content;
+        } 
+    } @else if $point == "foldland" {
+        @media only screen and (width: 653px) and (height: 280px) and (hover:none) and (pointer:coarse) {
             @content;
         } 
     }
