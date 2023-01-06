@@ -16,39 +16,39 @@ $xxl : 1400px;
 //세로
 @mixin breakpoint($point) {
     @if $point == xxs+"orien" {
-        @media only screen and (max-device-width: $xxs) and (orientation:portrait) and (hover:none) and (pointer:coarse){
+        @media only screen and (max-device-width: $xxs) and (orientation:portrait) and (hover:none){
             @content;
         }
     } @else if $point == xs+"orien" {
-        @media only screen and (min-device-width: $xs) and (orientation:portrait) and (hover:none) and (pointer:coarse) {
+        @media only screen and (min-device-width: $xs) and (orientation:portrait) and (hover:none) {
             @content;
         }
     } @else if $point == s+"orien" {
-        @media only screen and (min-device-width: $xs) and (orientation:portrait) and (hover:none) and (pointer:coarse) {
+        @media only screen and (min-device-width: $s) and (orientation:portrait) and (hover:none) {
             @content;
         }
     } @else if $point == m+"orien" {
-        @media only screen and (min-device-width: $m) and (orientation:portrait) and (hover:none) and (pointer:coarse) {
+        @media only screen and (min-device-width: $m) and (orientation:portrait) and (hover:none) {
             @content;
         }
     } @else if $point == l+"orien" {
-        @media only screen and (min-device-width: $l) and (orientation:portrait) and (hover:none) and (pointer:coarse) {
+        @media only screen and (min-device-width: $l) and (orientation:portrait) and (hover:none) {
             @content;
         }
     } @else if $point == xl+"orien" {
-        @media only screen and (min-device-width: $xl) and (orientation:portrait) and (hover:none) and (pointer:coarse) {
+        @media only screen and (min-device-width: $xl) and (orientation:portrait) and (hover:none) {
             @content;
         }
     } @else if $point == xxl+"orien" {
-        @media only screen and (min-device-width: $xxl) and (orientation:portrait) and (hover:none) and (pointer:coarse) {
+        @media only screen and (min-device-width: $xxl) and (orientation:portrait) and (hover:none) {
             @content;
         }
     } @else if $point == 'surfaceDuo+orien' {
-        @media only screen and (min-device-width: $xs) and (max-width: $s) and (height: 720px) and (orientation:portrait) and (hover:none) and (pointer:coarse) {
+        @media only screen and (min-device-width: $xs) and (max-width: $s) and (height: 720px) and (orientation:portrait) and (hover:none) {
             @content;
         }
     } @else if $point == 'fold+orien' {
-        @media only screen and (max-device-width: $xxs) and (height: 653px) and (orientation:portrait) and (hover:none) and (pointer:coarse) {
+        @media only screen and (max-device-width: $xxs) and (height: 653px) and (orientation:portrait) and (hover:none) {
             @content;
         }
     }
@@ -56,32 +56,32 @@ $xxl : 1400px;
 
 //가로
 @mixin landscape($point) {
-    @if $point == s+'land' {
-        @media (min-device-width: $s)and (orientation:landscape) and (hover:none) and (pointer:coarse) {
+    @if $point == s+'land'{
+        @media (min-device-width: $s) and (orientation:landscape) and (hover:none) {
             @content;
         } 
-    } @else if $point == m+"land" {
-        @media (min-device-width: $m) and (orientation:landscape) and (hover:none) and (pointer:coarse) {
+    } @else if $point == m+"land"{
+        @media (min-device-width: $m) and (orientation:landscape) and (hover:none) {
             @content;
         } 
-    } @else if $point == l+"land" {
-        @media (min-device-width: $l) and (orientation:landscape) and (hover:none) and (pointer:coarse) {
+    } @else if $point == l+"land"{
+        @media (min-device-width: $l) and (orientation:landscape) and (hover:none) {
             @content;
         } 
-    } @else if $point == xl+"land" {
-        @media (min-device-width: $xl) and (orientation:landscape) and (hover:none) and (pointer:coarse) {
+    } @else if $point == xl+"land"{
+        @media (min-device-width: $xl) and (orientation:landscape) and (hover:none) {
             @content;
         } 
-    } @else if $point == xxl+"land" {
-        @media (min-device-width: $xxl) and (orientation:landscape) and (hover:none) and (pointer:coarse) {
+    } @else if $point == xxl+"land"{
+        @media (min-device-width: $xxl) and (orientation:landscape) and (hover:none) {
             @content;
         } 
-    } @else if $point == "surfaceland" {
-        @media (width: 720px) and (height: 540px) and (hover:none) and (pointer:coarse) {
+    } @else if $point == "surfaceland"{
+        @media (width: 720px) and (height: 540px) and (hover:none) {
             @content;
         } 
-    } @else if $point == "foldland" {
-        @media (width: 653px) and (height: 280px) and (hover:none) and (pointer:coarse) {
+    } @else if $point == "foldland"{
+        @media (width: 653px) and (height: 280px) and (hover:none) {
             @content;
         } 
     }
