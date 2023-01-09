@@ -306,7 +306,7 @@
     }
 }
 
-@include breakpoint('surfaceDuo+orien') {
+@include breakpoint('surfaceDuoorien') {
     .container {
         width:100vw;
         height: 100vh;
@@ -363,7 +363,7 @@
     }
 }
 
-@include breakpoint('fold+orien') {
+@include breakpoint('foldorien') {
     .container {
         width:100vw;
         height: 100vh;
@@ -420,45 +420,361 @@
     }
 }
 
-// .container {
-//     width:30vw;
-//     height: 80vh;
-//     border-radius: 10px;
-//     border: 3px solid #ffb020;
-//     margin: 0 auto;
-//     .add_div {
-//         margin: 3vw auto;
-//         width: 300px;
-//         height: 450px;
-//         .img_div {
-//             height: 250px;
-//             input {
-//                 display: none;
-//             }
-//             img{
-//                 margin: 0 48px 0 48px;
-//             }
-//             img.noneImg {
-//                 display: none;
-//             }
-//             button {
-//                 margin: 30px 100px 0 100px;
-//             }
-//         }
-//         .info_div {
-//             border: 2px solid #ffb020;
-//             border-radius: 10px;
-//             input {
-//                 width: 200px;
-//                 margin-left: 40px;
-//             }
-//             .birth_input {
-//                 margin-left:0.8vw;
-//             }
+@include landscape(xs+'land') {
+    .container {
+        width:30vw;
+        height: 80vh;
+        border-radius: 10px;
+        border: 3px solid #ffb020;
+        margin: 0 auto;
+        .add_div {
+            margin: 3vw auto;
+            width: 300px;
+            height: 450px;
+            .img_div {
+                height: 250px;
+                input {
+                    display: none;
+                }
+                img{
+                    margin: 0 48px 0 48px;
+                }
+                img.noneImg {
+                    display: none;
+                }
+                button {
+                    margin: 30px 100px 0 100px;
+                }
+            }
+            .info_div {
+                border: 2px solid #ffb020;
+                border-radius: 10px;
+                input {
+                    width: 200px;
+                    margin-left: 40px;
+                }
+                .birth_input {
+                    margin-left:0.8vw;
+                }
+    
+                button {
+                    margin: 20px 110px 0 110px;
+                }
+            }
+        }
+    }
+}
 
-//             button {
-//                 margin: 20px 110px 0 110px;
-//             }
-//         }
-//     }
-// }
+@include landscape(s+'land') {
+    .container {
+        width:30vw;
+        height: 80vh;
+        border-radius: 10px;
+        border: 3px solid #ffb020;
+        margin: 0 auto;
+        .add_div {
+            margin: 3vw auto;
+            width: 300px;
+            height: 450px;
+            .img_div {
+                height: 250px;
+                input {
+                    display: none;
+                }
+                img{
+                    margin: 0 48px 0 48px;
+                }
+                img.noneImg {
+                    display: none;
+                }
+                button {
+                    margin: 30px 100px 0 100px;
+                }
+            }
+            .info_div {
+                border: 2px solid #ffb020;
+                border-radius: 10px;
+                input {
+                    width: 200px;
+                    margin-left: 40px;
+                }
+                .birth_input {
+                    margin-left:0.8vw;
+                }
+    
+                button {
+                    margin: 20px 110px 0 110px;
+                }
+            }
+        }
+    }
+}
+
+@include landscape(m+'land') {
+    .container {
+        width:30vw;
+        height: 80vh;
+        border-radius: 10px;
+        border: 3px solid #ffb020;
+        margin: 0 auto;
+        .add_div {
+            margin: 3vw auto;
+            width: 300px;
+            height: 450px;
+            .img_div {
+                height: 250px;
+                input {
+                    display: none;
+                }
+                img{
+                    margin: 0 48px 0 48px;
+                }
+                img.noneImg {
+                    display: none;
+                }
+                button {
+                    margin: 30px 100px 0 100px;
+                }
+            }
+            .info_div {
+                border: 2px solid #ffb020;
+                border-radius: 10px;
+                input {
+                    width: 200px;
+                    margin-left: 40px;
+                }
+                .birth_input {
+                    margin-left:0.8vw;
+                }
+    
+                button {
+                    margin: 20px 110px 0 110px;
+                }
+            }
+        }
+    }
+}
+
+@include landscape(l+'land') {
+    .container {
+        width:30vw;
+        height: 80vh;
+        border-radius: 10px;
+        border: 3px solid #ffb020;
+        margin: 0 auto;
+        .add_div {
+            margin: 3vw auto;
+            width: 300px;
+            height: 450px;
+            .img_div {
+                height: 250px;
+                input {
+                    display: none;
+                }
+                img{
+                    margin: 0 48px 0 48px;
+                }
+                img.noneImg {
+                    display: none;
+                }
+                button {
+                    margin: 30px 100px 0 100px;
+                }
+            }
+            .info_div {
+                border-top: 3px solid #ffb020;
+                input {
+                    width: 200px;
+                    margin-left: 40px;
+                }
+                .birth_input {
+                    margin-left:0.8vw;
+                }
+    
+                button {
+                    margin: 20px 110px 0 110px;
+                }
+            }
+        }
+    }
+}
+
+@include landscape(xl+'land') {
+    .container {
+        width:30vw;
+        height: 80vh;
+        border-radius: 10px;
+        border: 3px solid #ffb020;
+        margin: 0 auto;
+        .add_div {
+            margin: 3vw auto;
+            width: 300px;
+            height: 450px;
+            .img_div {
+                height: 250px;
+                input {
+                    display: none;
+                }
+                img{
+                    margin: 0 48px 0 48px;
+                }
+                img.noneImg {
+                    display: none;
+                }
+                button {
+                    margin: 30px 100px 0 100px;
+                }
+            }
+            .info_div {
+                border: 2px solid #ffb020;
+                border-radius: 10px;
+                input {
+                    width: 200px;
+                    margin-left: 40px;
+                }
+                .birth_input {
+                    margin-left:0.8vw;
+                }
+    
+                button {
+                    margin: 20px 110px 0 110px;
+                }
+            }
+        }
+    }
+}
+
+@include landscape(xxl+'land') {
+    .container {
+        width:30vw;
+        height: 80vh;
+        border-radius: 10px;
+        border: 3px solid #ffb020;
+        margin: 0 auto;
+        .add_div {
+            margin: 3vw auto;
+            width: 300px;
+            height: 450px;
+            .img_div {
+                height: 250px;
+                input {
+                    display: none;
+                }
+                img{
+                    margin: 0 48px 0 48px;
+                }
+                img.noneImg {
+                    display: none;
+                }
+                button {
+                    margin: 30px 100px 0 100px;
+                }
+            }
+            .info_div {
+                border: 2px solid #ffb020;
+                border-radius: 10px;
+                input {
+                    width: 200px;
+                    margin-left: 40px;
+                }
+                .birth_input {
+                    margin-left:0.8vw;
+                }
+    
+                button {
+                    margin: 20px 110px 0 110px;
+                }
+            }
+        }
+    }
+}
+
+@include landscape('surfaceland') {
+    .container {
+        width:30vw;
+        height: 80vh;
+        border-radius: 10px;
+        border: 3px solid #ffb020;
+        margin: 0 auto;
+        .add_div {
+            margin: 3vw auto;
+            width: 300px;
+            height: 450px;
+            .img_div {
+                height: 250px;
+                input {
+                    display: none;
+                }
+                img{
+                    margin: 0 48px 0 48px;
+                }
+                img.noneImg {
+                    display: none;
+                }
+                button {
+                    margin: 30px 100px 0 100px;
+                }
+            }
+            .info_div {
+                border: 2px solid #ffb020;
+                border-radius: 10px;
+                input {
+                    width: 200px;
+                    margin-left: 40px;
+                }
+                .birth_input {
+                    margin-left:0.8vw;
+                }
+    
+                button {
+                    margin: 20px 110px 0 110px;
+                }
+            }
+        }
+    }
+}
+
+@include landscape('foldland') {
+    .container {
+        width:30vw;
+        height: 80vh;
+        border-radius: 10px;
+        border: 3px solid #ffb020;
+        margin: 0 auto;
+        .add_div {
+            margin: 3vw auto;
+            width: 300px;
+            height: 450px;
+            .img_div {
+                height: 250px;
+                input {
+                    display: none;
+                }
+                img{
+                    margin: 0 48px 0 48px;
+                }
+                img.noneImg {
+                    display: none;
+                }
+                button {
+                    margin: 30px 100px 0 100px;
+                }
+            }
+            .info_div {
+                border: 2px solid #ffb020;
+                border-radius: 10px;
+                input {
+                    width: 200px;
+                    margin-left: 40px;
+                }
+                .birth_input {
+                    margin-left:0.8vw;
+                }
+    
+                button {
+                    margin: 20px 110px 0 110px;
+                }
+            }
+        }
+    }
+}

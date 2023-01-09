@@ -103,7 +103,7 @@
                 img {
                     width: 7%;
                     height: 30%;
-                    margin: 0 2px 0 2px;
+                    margin: 2vh 2px 0 2px;
                     cursor: pointer;
     
                     &:hover {
@@ -276,7 +276,7 @@
     }
 }
 
-@include breakpoint("surfaceDuo+orien") {
+@include breakpoint("surfaceDuoorien") {
     .friends_boder {
         width: 100%;
         height: 59vh;
@@ -347,7 +347,7 @@
     }
 }
 
-@include breakpoint("fold+orien") {
+@include breakpoint("foldorien") {
     .friends_boder {
         width: 100%;
         height: 60vh;
@@ -416,6 +416,7 @@
         }
     }
 }
+
 
 @include landscape(xs+'land') {
     .friends_boder {
@@ -636,6 +637,7 @@
         width: 80%;
         height: 60vh;
         overflow-y: auto;
+        margin: 0 auto;
         ul {
             padding: 0;
             margin: 0;
@@ -654,6 +656,148 @@
                         border: 1px solid #ffb020;
                         border-radius: 50px;
                         width: 9%;
+                        height: 85%;
+                        margin-left: 10px;
+                        margin-top: 7px;
+                    }
+                    h3 {
+                        margin-left: 2vw;
+                        height: 2vh;
+                        font-size: 2vw;
+                    }
+                }
+                img {
+                    width: 3vw;
+                    height: 4vh;
+                    margin: 3.5vh 1vw 0 1vw;
+                    cursor: pointer;
+    
+                    &:hover {
+                        transition: all ease-in 0.1s;
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+    .search_border {
+        width: 100%;
+        height: 6vh;
+        display: flex;
+        justify-content: flex-start;
+        margin: 2vh 0;
+        .img {
+            width: 5%;
+            height: 100%;
+        }
+        .img:hover {
+            cursor: pointer;
+        }
+        .input {
+            border: 1px solid black;
+            padding-left: 1vw;
+            height: 100%;
+            width: 80%;
+            font-size: 2vw;
+            margin: 0 3vw;
+        }
+    }
+}
+
+@include landscape(xl+'land') {
+    .friends_boder {
+        width: 80%;
+        height: 60vh;
+        overflow-y: auto;
+        ul {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            li {
+                width: 100%;
+                height: 13vh;
+                display: flex;
+                justify-content: flex-start;
+                a {
+                    width: 100%;
+                    height: 90%;
+                    display: flex;
+                    justify-content: flex-start;
+                    img {
+                        border: 1px solid #ffb020;
+                        border-radius: 50px;
+                        width: 9%;
+                        height: 85%;
+                        margin-left: 10px;
+                        margin-top: 7px;
+                    }
+                    h3 {
+                        margin-left: 2vw;
+                        height: 2vh;
+                        font-size: 2vw;
+                    }
+                }
+                img {
+                    width: 3vw;
+                    height: 4vh;
+                    margin: 3.5vh 1vw 0 1vw;
+                    cursor: pointer;
+    
+                    &:hover {
+                        transition: all ease-in 0.1s;
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+    .search_border {
+        width: 100%;
+        height: 6vh;
+        display: flex;
+        justify-content: flex-start;
+        margin: 2vh 0;
+        .img {
+            width: 5%;
+            height: 100%;
+        }
+        .img:hover {
+            cursor: pointer;
+        }
+        .input {
+            border: 1px solid black;
+            padding-left: 1vw;
+            height: 100%;
+            width: 80%;
+            font-size: 2vw;
+            margin: 0 3vw;
+        }
+    }
+}
+
+@include landscape(xxl+'land') {
+    .friends_boder {
+        width: 80%;
+        height: 60vh;
+        overflow-y: auto;
+        ul {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            li {
+                width: 100%;
+                height: 13vh;
+                display: flex;
+                justify-content: flex-start;
+                a {
+                    width: 100%;
+                    height: 90%;
+                    display: flex;
+                    justify-content: flex-start;
+                    img {
+                        border: 1px solid #ffb020;
+                        border-radius: 50px;
+                        width: 8%;
                         height: 85%;
                         margin-left: 10px;
                         margin-top: 7px;

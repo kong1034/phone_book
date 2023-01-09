@@ -43,11 +43,11 @@ $xxl : 1400px;
         @media only screen and (min-device-width: $xxl) and (orientation:portrait) and (hover:none) {
             @content;
         }
-    } @else if $point == 'surfaceDuo+orien' {
+    } @else if $point == 'surfaceDuoorien' {
         @media only screen and (min-device-width: $xs) and (max-width: $s) and (height: 720px) and (orientation:portrait) and (hover:none) {
             @content;
         }
-    } @else if $point == 'fold+orien' {
+    } @else if $point == 'foldorien' {
         @media only screen and (max-device-width: $xxs) and (height: 653px) and (orientation:portrait) and (hover:none) {
             @content;
         }
@@ -69,15 +69,15 @@ $xxl : 1400px;
             @content;
         } 
     } @else if $point == l+"land"{
-        @media (min-device-width: $l) and (orientation:landscape) and (hover:none) {
+        @media (min-device-width: $l) and (orientation:landscape) {
             @content;
         } 
     } @else if $point == xl+"land"{
-        @media (min-device-width: $xl) and (orientation:landscape) and (hover:none) {
+        @media (min-device-width: $xl) and (orientation:landscape) {
             @content;
         } 
     } @else if $point == xxl+"land"{
-        @media (min-device-width: $xxl) and (orientation:landscape) and (hover:none) {
+        @media (min-device-width: $xxl) and (orientation:landscape) {
             @content;
         } 
     } @else if $point == "surfaceland"{
@@ -86,6 +86,26 @@ $xxl : 1400px;
         } 
     } @else if $point == "foldland"{
         @media (width: 653px) and (height: 280px) and (hover:none) {
+            @content;
+        } 
+    } @else if $point == l+"landtablet"{
+        @media (min-device-width: $l) and (orientation:landscape) and (hover:none) {
+            @content;
+        } 
+    } @else if $point == xl+"landtablet"{
+        @media (min-device-width: $xl) and (orientation:landscape) and (hover:none) {
+            @content;
+        } 
+    } @else if $point == "surfacelandtablet"{
+        @media (width: 1368px) and (height: 912px) and (hover:none) {
+            @content;
+        } 
+    } @else if $point == "nexthublandtablet"{
+        @media (width: 1024px) and (height: 600px) and (hover:none) {
+            @content;
+        } 
+    } @else if $point == "nexthubmaxlandtablet"{
+        @media (width: 1280px) and (height: 800px) and (hover:none) {
             @content;
         } 
     }
