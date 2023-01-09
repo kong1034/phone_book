@@ -417,6 +417,78 @@
     }
 }
 
+@include landscape(xs+'land') {
+    .friends_boder {
+        width: 80%;
+        height: 100vh;
+        overflow-y: auto;
+        margin: 0 auto;
+        ul {
+            padding: 0;
+            margin: 0;
+            height: 120vh;
+            li {
+                width: 100%;
+                height: 20%;
+                display: flex;
+                justify-content: flex-start;
+                border-bottom: 1px solid #dddddd;
+                a {
+                    width: 100%;
+                    height: 71px;
+                    display: flex;
+                    justify-content: flex-start;
+                    img {
+                        border: 1px solid #ffb020;
+                        border-radius: 50px;
+                        width: 15%;
+                        height: 110%;
+                        margin-left: 10px;
+                        margin-top: 7px;
+                    }
+                    h3 {
+                        margin-left: 2vw;
+                        height: 2vh;
+                        font-size: 4vw;
+                    }
+                }
+                img {
+                    width: 3%;
+                    height: 25%;
+                    margin: 8vh 1vw 0 1vw;
+                    cursor: pointer;
+    
+                    &:hover {
+                        transition: all ease-in 0.1s;
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+    .search_border {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: flex-start;
+        margin: 2vh 0;
+        .img {
+            width: 7%;
+            height: 100%;
+        }
+        .img:hover {
+            cursor: pointer;
+        }
+        .input {
+            padding-left: 1vw;
+            height: 100%;
+            width: 100%;
+            font-size: 3vw;
+            margin: 0 2vw;
+        }
+    }
+}
+
 @include landscape(s+'land') {
     .friends_boder {
         width: 80%;

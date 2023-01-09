@@ -56,7 +56,11 @@ $xxl : 1400px;
 
 //가로
 @mixin landscape($point) {
-    @if $point == s+'land'{
+    @if $point == xs+'land'{
+        @media (min-device-width: $xs) and (orientation:landscape) and (hover:none) {
+            @content;
+        } 
+    } @else if $point == s+"land"{
         @media (min-device-width: $s) and (orientation:landscape) and (hover:none) {
             @content;
         } 
