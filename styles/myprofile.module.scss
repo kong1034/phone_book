@@ -177,6 +177,154 @@
     }
 }
 
+@include breakpoint(xxs+'oriendesktop') {
+    .profile {
+        margin: 0 auto;
+        width: 100%;
+        height: 25vh;
+        border-bottom: 2px solid #dddddd;
+        display: flex;
+        justify-content: space-around;
+        .img_div {
+            width: 38%;
+            height: 80%;
+            border-radius: 50vw;
+            margin-top: 3vh;
+            border: 2px solid #ffb020;
+            img {
+                border-radius: 50vw;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+        .my_name {
+            line-height: 10vw;
+            margin: 7vh 15% 0 0;
+        }
+    }
+}
+
+@include breakpoint(xs+'oriendesktop') {
+    .profile {
+        margin: 0 auto;
+        width: 100%;
+        height: 25vh;
+        border-bottom: 2px solid #dddddd;
+        display: flex;
+        justify-content: space-around;
+        .img_div {
+            width: 38%;
+            height: 80%;
+            border-radius: 50vw;
+            margin-top: 3vh;
+            border: 2px solid #ffb020;
+            img {
+                border-radius: 50vw;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+        .my_name {
+            line-height: 10vw;
+            margin: 7vh 15% 0 0;
+        }
+    }
+}
+
+@include breakpoint(s+'oriendesktop') {
+    .profile {
+        margin: 0 auto;
+        width: 100vw;
+        height: 24vh;
+        border-bottom: 2px solid #dddddd;
+        display: flex;
+        justify-content: space-around;
+        .img_div {
+            width: 38%;
+            height: 80%;
+            border-radius: 50vw;
+            margin-top: 2vh;
+            border: 2px solid #ffb020;
+            img {
+                border-radius: 50vw;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+        .my_name {
+            line-height: 10vw;
+            margin: 7vh 10% 0 0;
+            font-size: 25px;
+        }
+    }
+}
+
+@include breakpoint(m+'oriendesktop') {
+    .profile {
+        margin: 0 auto;
+        width: 100%;
+        height: 25vh;
+        border-bottom: 2px solid #dddddd;
+        display: flex;
+        justify-content: space-around;
+        .img_div {
+            width: 180px;
+            height: 180px;
+            border-radius: 50vw;
+            margin-top: 3vh;
+            border: 2px solid #ffb020;
+            img {
+                border-radius: 50vw;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+        .my_name {
+            line-height: 5vh;
+            margin-right: 15%;
+            font-size: 35px;
+        }
+    }
+}
+
+@include breakpoint(xxl+'oriendesktop') {
+    .profile {
+        margin: 0 auto;
+        width: 100%;
+        height: 25vh;
+        border-bottom: 2px solid #dddddd;
+        display: flex;
+        justify-content: space-around;
+        .img_div {
+            width: 160px;
+            height: 160px;
+            border-radius: 50vw;
+            margin-top: 3vh;
+            border: 2px solid #ffb020;
+            img {
+                border-radius: 50vw;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+        .my_name {
+            line-height: 1vh;
+            margin-right: 15%;
+            font-size: 35px;
+        }
+    }
+}
+
 @include landscape(xs+'land') {
     .profile {
         margin: 0 auto;
@@ -331,13 +479,13 @@
     .profile {
         margin: 0 auto;
         width: 60%;
-        height: 35vh;
+        height: 25vh;
         border-bottom: 2px solid #dddddd;
         display: flex;
         justify-content: space-around;
         .img_div {
-            width: 25%;
-            height: 80%;
+            width: 150px;
+            height: 150px;
             border-radius: 50vw;
             margin-top: 3vh;
             border: 2px solid #ffb020;
@@ -350,9 +498,9 @@
             }
         }
         .my_name {
-            line-height: 25vh;
+            line-height: 12vh;
             margin-right: 10%;
-            font-size: 35px;
+            font-size: 30px;
         }
     }
 }

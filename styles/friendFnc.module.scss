@@ -34,11 +34,11 @@
                 border-top: 3px solid #ffb020;
                 width: 100%;
                 input {
-                    width: 70vw;
+                    width: 150px;
                     margin-left: 40px;
                 }
                 .birth_input {
-                    margin-left:3.3vw;
+                    margin-left: 16px;
                 }
 
                 button {
@@ -191,13 +191,13 @@
                 font-size: 4vw;
                 margin: 0 2vw 0 0;
                 input {
-                    width: 70vw;
-                    margin-left: 15vw;
+                    width: 450px;
+                    margin-left: 100px;
                     height: 4vh;
                     font-size: 20px;
                 }
                 .birth_input {
-                    margin-left:8vw;
+                    margin-left:50px;
                     font-size: 20px;
                 }
                 button {
@@ -344,13 +344,13 @@
                 font-size: 4vw;
                 margin: 0 2vw 0 0;
                 input {
-                    width: 70vw;
-                    margin-left: 15vw;
+                    width: 300px;
+                    margin-left: 50px;
                     height: 4vh;
                     font-size: 20px;
                 }
                 .birth_input {
-                    margin-left:8vw;
+                    margin-left:17px;
                     font-size: 20px;
                 }
                 button {
@@ -401,19 +401,72 @@
                 font-size: 4vw;
                 margin: 0 2vw 0 0;
                 input {
-                    width: 70vw;
-                    margin-left: 15vw;
+                    width: 150px;
+                    margin-left: 42px;
                     height: 4vh;
                     font-size: 20px;
                 }
                 .birth_input {
-                    margin-left:8vw;
+                    margin-left:26px;
                     font-size: 20px;
                 }
                 button {
                     margin: 7vh 37vw 0 37vw;
                     height: 3vh;
                     width: 25vw;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(xxs+'oriendesktop') {
+    .container {
+        width:100vw;
+        height: 100vh;
+        border-radius: 10px;
+        border: 3px solid #ffb020;
+        margin: 0 auto;
+        .add_div {
+            margin: 3vw auto;
+            width: 100%;
+            height: 80vh;
+            .img_div {
+                height: 45vh;
+                input {
+                    display: none;
+                }
+                img{
+                    width: 50%;
+                    height: 60%;
+                    margin: 0 23vw 0 23vw;
+                }
+                img.noneImg {
+                    display: none;
+                }
+                button {
+                    margin: 8vh 34vw 0 34vw;
+                    width: 30vw;
+                }
+            }
+            .info_div {
+                border: 3px solid #ffb020;
+                width: 90%;
+                margin: 0 auto;
+                ul {
+                    margin: 1vh 20vw;
+                    width: 80%;
+                }
+                input {
+                    width: 220px;
+                    margin-left: 50px;
+                }
+                .birth_input {
+                    margin-left: 26px;
+                }
+
+                button {
+                    margin: 5vh 38vw 0 38vw;
                 }
             }
         }
@@ -467,15 +520,15 @@
 
 @include landscape(s+'land') {
     .container {
-        width:30vw;
-        height: 80vh;
+        width:100vw;
+        height: 140vh;
         border-radius: 10px;
         border: 3px solid #ffb020;
         margin: 0 auto;
         .add_div {
             margin: 3vw auto;
             width: 300px;
-            height: 450px;
+            height: 400px;
             .img_div {
                 height: 250px;
                 input {
@@ -495,11 +548,11 @@
                 border: 2px solid #ffb020;
                 border-radius: 10px;
                 input {
-                    width: 200px;
+                    width: 150px;
                     margin-left: 40px;
                 }
                 .birth_input {
-                    margin-left:0.8vw;
+                    margin-left:16px;
                 }
     
                 button {
@@ -512,8 +565,8 @@
 
 @include landscape(m+'land') {
     .container {
-        width:30vw;
-        height: 80vh;
+        width:100vw;
+        height: 140vh;
         border-radius: 10px;
         border: 3px solid #ffb020;
         margin: 0 auto;
@@ -540,11 +593,11 @@
                 border: 2px solid #ffb020;
                 border-radius: 10px;
                 input {
-                    width: 200px;
+                    width: 18vw;
                     margin-left: 40px;
                 }
                 .birth_input {
-                    margin-left:0.8vw;
+                    margin-left:1.8vw;
                 }
     
                 button {
@@ -557,8 +610,8 @@
 
 @include landscape(l+'land') {
     .container {
-        width:30vw;
-        height: 80vh;
+        width:100vw;
+        height: 100vh;
         border-radius: 10px;
         border: 3px solid #ffb020;
         margin: 0 auto;
@@ -566,6 +619,209 @@
             margin: 3vw auto;
             width: 300px;
             height: 450px;
+            .img_div {
+                height: 45vh;
+                input {
+                    display: none;
+                }
+                img{
+                    margin: 0 48px 0 48px;
+                }
+                img.noneImg {
+                    display: none;
+                }
+                button {
+                    margin: 30px 100px 0 100px;
+                }
+            }
+            .info_div {
+                border: 2px solid #ffb020;
+                border-radius: 10px;
+                input {
+                    width: 150px;
+                    margin-left: 40px;
+                }
+                .birth_input {
+                    margin-left:17px;
+                }
+    
+                button {
+                    margin: 20px 110px 0 110px;
+                }
+            }
+        }
+    }
+}
+
+@include landscape(xl+'land') {
+    .container {
+        width:100vw;
+        height: 100vh;
+        border-radius: 10px;
+        border: 3px solid #ffb020;
+        margin: 0 auto;
+        .add_div {
+            margin: 3vw auto;
+            width: 55%;
+            height: 80%;
+            .img_div {
+                height: 65%;
+                input {
+                    display: none;
+                }
+                img{
+                    width: 30vw;
+                    margin: 0 13vw;
+                }
+                img.noneImg {
+                    display: none;
+                }
+                button {
+                    height: 5vh;
+                    width: 10vw;
+                    margin: 1vh 23vw 0 23vw;
+                }
+            }
+            .info_div {
+                border: 2px solid #ffb020;
+                border-radius: 10px;
+                width: 100%;
+                height: 25vh;
+                padding: 0 16vw;
+                margin-top: 2vh;
+                input {
+                    width: 170px;
+                    margin-left: 40px;
+                }
+                .birth_input {
+                    margin-left: 16px;
+                }
+    
+                button {
+                    width: 7vw;
+                    height: 4vh;
+                    margin: 1vh 8vw 0 8vw;
+                }
+            }
+        }
+    }
+}
+
+@include landscape(xxl+'land') {
+    .container {
+        width:100vw;
+        height: 100vh;
+        border-radius: 10px;
+        border: 3px solid #ffb020;
+        margin: 0 auto;
+        .add_div {
+            margin: 1vw auto;
+            width: 60%;
+            height: 80%;
+            .img_div {
+                width: 50%;
+                height: 60%;
+                margin: 0 auto;
+                input {
+                    display: none;
+                }
+                img{
+                    height: 80%;
+                    width: 80%;
+                    margin: 0 48px 0 48px;
+                }
+                img.noneImg {
+                    display: none;
+                }
+                button {
+                    margin: 1vh 9vw 0 9vw;
+                }
+            }
+            .info_div {
+                border: 2px solid #ffb020;
+                border-radius: 10px;
+                margin: 0 auto;
+                height: 40%;
+                ul {
+                    width: 100%;
+                    padding: 0;
+                    li {
+                        width: 100%;
+                        input {
+                            width: 60%;
+                            margin-left: 50px;
+                        }
+                        .birth_input {
+                            width: 60%;
+                            margin-left: 27px;
+                        }
+            
+                        button {
+                            margin: 20px 5vw 0 5vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include landscape('surfaceland') {
+    .container {
+        width:100vw;
+        height: 100vh;
+        border-radius: 10px;
+        border: 3px solid #ffb020;
+        margin: 0 auto;
+        .add_div {
+            margin: 3vw auto;
+            width: 300px;
+            height: 430px;
+            .img_div {
+                height: 250px;
+                input {
+                    display: none;
+                }
+                img{
+                    margin: 0 48px 0 48px;
+                }
+                img.noneImg {
+                    display: none;
+                }
+                button {
+                    margin: 30px 100px 0 100px;
+                }
+            }
+            .info_div {
+                border: 2px solid #ffb020;
+                border-radius: 10px;
+                input {
+                    width: 150px;
+                    margin-left: 40px;
+                }
+                .birth_input {
+                    margin-left:17px;
+                }
+    
+                button {
+                    margin: 15px 110px 5px 110px;
+                }
+            }
+        }
+    }
+}
+
+@include landscape('foldland') {
+    .container {
+        width:100vw;
+        height: 180vh;
+        border-radius: 10px;
+        border: 3px solid #ffb020;
+        margin: 0 auto;
+        .add_div {
+            margin: 3vw auto;
+            width: 300px;
+            height: 100vh;
             .img_div {
                 height: 250px;
                 input {
@@ -583,192 +839,13 @@
             }
             .info_div {
                 border-top: 3px solid #ffb020;
-                input {
-                    width: 200px;
-                    margin-left: 40px;
-                }
-                .birth_input {
-                    margin-left:0.8vw;
-                }
-    
-                button {
-                    margin: 20px 110px 0 110px;
-                }
-            }
-        }
-    }
-}
-
-@include landscape(xl+'land') {
-    .container {
-        width:30vw;
-        height: 80vh;
-        border-radius: 10px;
-        border: 3px solid #ffb020;
-        margin: 0 auto;
-        .add_div {
-            margin: 3vw auto;
-            width: 300px;
-            height: 450px;
-            .img_div {
-                height: 250px;
-                input {
-                    display: none;
-                }
-                img{
-                    margin: 0 48px 0 48px;
-                }
-                img.noneImg {
-                    display: none;
-                }
-                button {
-                    margin: 30px 100px 0 100px;
-                }
-            }
-            .info_div {
-                border: 2px solid #ffb020;
                 border-radius: 10px;
                 input {
-                    width: 200px;
+                    width: 170px;
                     margin-left: 40px;
                 }
                 .birth_input {
-                    margin-left:0.8vw;
-                }
-    
-                button {
-                    margin: 20px 110px 0 110px;
-                }
-            }
-        }
-    }
-}
-
-@include landscape(xxl+'land') {
-    .container {
-        width:30vw;
-        height: 80vh;
-        border-radius: 10px;
-        border: 3px solid #ffb020;
-        margin: 0 auto;
-        .add_div {
-            margin: 3vw auto;
-            width: 300px;
-            height: 450px;
-            .img_div {
-                height: 250px;
-                input {
-                    display: none;
-                }
-                img{
-                    margin: 0 48px 0 48px;
-                }
-                img.noneImg {
-                    display: none;
-                }
-                button {
-                    margin: 30px 100px 0 100px;
-                }
-            }
-            .info_div {
-                border: 2px solid #ffb020;
-                border-radius: 10px;
-                input {
-                    width: 200px;
-                    margin-left: 40px;
-                }
-                .birth_input {
-                    margin-left:0.8vw;
-                }
-    
-                button {
-                    margin: 20px 110px 0 110px;
-                }
-            }
-        }
-    }
-}
-
-@include landscape('surfaceland') {
-    .container {
-        width:30vw;
-        height: 80vh;
-        border-radius: 10px;
-        border: 3px solid #ffb020;
-        margin: 0 auto;
-        .add_div {
-            margin: 3vw auto;
-            width: 300px;
-            height: 450px;
-            .img_div {
-                height: 250px;
-                input {
-                    display: none;
-                }
-                img{
-                    margin: 0 48px 0 48px;
-                }
-                img.noneImg {
-                    display: none;
-                }
-                button {
-                    margin: 30px 100px 0 100px;
-                }
-            }
-            .info_div {
-                border: 2px solid #ffb020;
-                border-radius: 10px;
-                input {
-                    width: 200px;
-                    margin-left: 40px;
-                }
-                .birth_input {
-                    margin-left:0.8vw;
-                }
-    
-                button {
-                    margin: 20px 110px 0 110px;
-                }
-            }
-        }
-    }
-}
-
-@include landscape('foldland') {
-    .container {
-        width:30vw;
-        height: 80vh;
-        border-radius: 10px;
-        border: 3px solid #ffb020;
-        margin: 0 auto;
-        .add_div {
-            margin: 3vw auto;
-            width: 300px;
-            height: 450px;
-            .img_div {
-                height: 250px;
-                input {
-                    display: none;
-                }
-                img{
-                    margin: 0 48px 0 48px;
-                }
-                img.noneImg {
-                    display: none;
-                }
-                button {
-                    margin: 30px 100px 0 100px;
-                }
-            }
-            .info_div {
-                border: 2px solid #ffb020;
-                border-radius: 10px;
-                input {
-                    width: 200px;
-                    margin-left: 40px;
-                }
-                .birth_input {
-                    margin-left:0.8vw;
+                    margin-left:16px;
                 }
     
                 button {

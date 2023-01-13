@@ -417,6 +417,74 @@
     }
 }
 
+@include breakpoint(xxs+'oriendesktop') {
+    .friends_boder {
+        width: 100%;
+        height: 58%;
+        overflow-y: auto;
+        ul {
+            padding: 0;
+            margin: 0;
+            li {
+                width: 100%;
+                height: 71px;
+                display: flex;
+                justify-content: flex-start;
+                a {
+                    width: 100vw;
+                    height: 10vh;
+                    display: flex;
+                    justify-content: flex-start;
+                    img {
+                        border: 1px solid #ffb020;
+                        border-radius: 50px;
+                        width: 60px;
+                        height: 60px;
+                        margin-left: 10px;
+                        margin-top: 7px;
+                    }
+                    h3 {
+                        margin-left: 10px;
+                        height: 20px;
+                        font-size: 22px;
+                    }
+                }
+                img {
+                    width: 30px;
+                    height: 30px;
+                    margin: 5px 2px 0 2px;
+                    cursor: pointer;
+    
+                    &:hover {
+                        transition: all ease-in 0.1s;
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+    .search_border {
+        width: 100%;
+        height: 12%;
+        display: flex;
+        justify-content: flex-start;
+        margin: 2vw 0;
+        .img {
+            width: 30px;
+            height: 30px;
+        }
+        .img:hover {
+            cursor: pointer;
+        }
+        .input {
+            height: 80%;
+            width: 80%;
+            font-size: 20px;
+            margin: 0 3.5vw;
+        }
+    }
+}
+
 
 @include landscape(xs+'land') {
     .friends_boder {
@@ -797,21 +865,22 @@
                     img {
                         border: 1px solid #ffb020;
                         border-radius: 50px;
-                        width: 8%;
-                        height: 85%;
+                        width: 100px;
+                        height: 100px;
                         margin-left: 10px;
                         margin-top: 7px;
                     }
                     h3 {
                         margin-left: 2vw;
-                        height: 2vh;
-                        font-size: 2vw;
+                        height: 50%;
+                        width: 100%;
+                        font-size: 35px;
                     }
                 }
                 img {
-                    width: 3vw;
-                    height: 4vh;
-                    margin: 3.5vh 1vw 0 1vw;
+                    width: 40px;
+                    height: 40px;
+                    margin: 30px 5px 0 5px;
                     cursor: pointer;
     
                     &:hover {

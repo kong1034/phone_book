@@ -34,6 +34,40 @@
     }
 }
 
+@include breakpoint(xxs+'oriendesktop') {
+    .header {
+        width: 100%;
+        height: 15%;
+        border-bottom: 1px solid #ffb020;
+        background-color: #ffb020;
+        display: flex;
+        justify-content: space-around;
+        div {
+            height: 50%;
+            width: 10%;
+            line-height: 13vh;
+            color: #fff;
+            .link, .back_btn {
+                cursor: pointer;
+                font-size: 50px;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                width: 60px;
+                height: 60px;
+            }
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+            font-size:xx-large;
+            height: 100%;
+            line-height: 13vh;
+            margin: 0;
+        }
+    }
+}
+
 @include breakpoint(xs+'orien') {
     .header {
         width: 100%;
@@ -170,6 +204,40 @@
     }
 }
 
+@include landscape(xxs+'land') {
+    .header {
+        width: 100%;
+        height: 15vh;
+        border-bottom: 1px solid #ffb020;
+        background-color: #ffb020;
+        display: flex;
+        justify-content: space-around;
+        div {
+            height: 100%;
+            width: 10%;
+            line-height: 13vh;
+            color: #fff;
+            .link, .back_btn {
+                cursor: pointer;
+                font-size: 7vw;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+            font-size:xx-large;
+            height: 100%;
+            line-height: 15vh;
+            margin: 0;
+        }
+    }
+}
+
 @include landscape(xs+'land') {
     .header {
         width: 100%;
@@ -206,7 +274,7 @@
 
 @include landscape(s+'land') {
     .header {
-        width: 100%;
+        width: 99.5vw;
         height: 15vh;
         border-bottom: 1px solid #ffb020;
         background-color: #ffb020;
@@ -355,12 +423,13 @@
             color: #fff;
             .link, .back_btn {
                 cursor: pointer;
-                font-size: 5vw;
+                font-size: 50px;
                 color: #fff;
                 display: flex;
                 justify-content: center;
-                width: 100%;
-                height: 100%;
+                width: 80px;
+                height: 80px;
+                line-height: 15vh;
             }
         }
         h1 {

@@ -289,6 +289,230 @@
     }
 }
 
+@include breakpoint(xxs+'oriendesktop') {
+    .info_border {
+        width: 100%;
+        height: 59vh;
+        margin: 1vw auto;
+        div {
+            margin: 2vh 0 0 0vw;
+            padding-left: 1vw;
+            font-size: 8vw;
+            line-height: 5vw;
+            height: 5vh;
+        }
+    
+        .fnc_border {
+            width: 100%;
+            height: 11vw;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30vh;
+            .img_box {
+                width: 70px;
+                height: 70px;
+                margin-top: 3vw;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(xs+'oriendesktop') {
+    .info_border {
+        width: 100%;
+        height: 59vh;
+        margin: 1vw auto;
+        div {
+            margin: 2vh 0 0 0vw;
+            padding-left: 1vw;
+            font-size: 8vw;
+            line-height: 5vw;
+            height: 5vh;
+        }
+    
+        .fnc_border {
+            width: 100%;
+            height: 11vw;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30vh;
+            .img_box {
+                width: 70px;
+                height: 70px;
+                margin-top: 3vw;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(s+'oriendesktop') {
+    .info_border {
+        width: 100%;
+        height: 59vh;
+        margin: 1vw auto;
+        div {
+            margin: 2vh 0 0 0vw;
+            padding-left: 1vw;
+            font-size: 9vw;
+            line-height: 5vw;
+            height: 5vh;
+        }
+    
+        .fnc_border {
+            width: 100%;
+            height: 11vw;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 35vh;
+            .img_box {
+                width: 70px;
+                height: 70px;
+                margin-top: 3vw;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(m+'oriendesktop') {
+    .info_border {
+        width: 100%;
+        height: 59vh;
+        margin: 1vw auto;
+        div {
+            margin: 2vh 0 0 0vw;
+            padding-left: 1vw;
+            font-size: 7vw;
+            line-height: 5vw;
+            height: 5vh;
+        }
+    
+        .fnc_border {
+            width: 100%;
+            height: 15vw;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 33vh;
+            .img_box {
+                width: 15vw;
+                height: 10vh;
+                margin-top: 3vw;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(l+'oriendesktop') {
+    .info_border {
+        width: 100%;
+        height: 59vh;
+        margin: 1vw auto;
+        div {
+            margin: 2vh 0 0 0vw;
+            padding-left: 1vw;
+            font-size: 8vw;
+            line-height: 5vw;
+            height: 5vh;
+        }
+    
+        .fnc_border {
+            width: 100%;
+            height: 11vw;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30vh;
+            .img_box {
+                width: 70px;
+                height: 70px;
+                margin-top: 3vw;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(xl+'oriendesktop') {
+    .info_border {
+        width: 100%;
+        height: 59vh;
+        margin: 1vw auto;
+        div {
+            margin: 2vh 0 0 0vw;
+            padding-left: 1vw;
+            font-size: 8vw;
+            line-height: 5vw;
+            height: 5vh;
+        }
+    
+        .fnc_border {
+            width: 100%;
+            height: 11vw;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30vh;
+            .img_box {
+                width: 70px;
+                height: 70px;
+                margin-top: 3vw;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(xxl+'oriendesktop') {
+    .info_border {
+        width: 70%;
+        height: 59vh;
+        margin: 1vw auto;
+        div {
+            margin: 2vh 0 0 0vw;
+            padding-left: 1vw;
+            font-size: 40px;
+            line-height: 5vw;
+            height: 5vh;
+        }
+    
+        .fnc_border {
+            width: 100%;
+            height: 11vw;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30vh;
+            .img_box {
+                width: 70px;
+                height: 70px;
+                margin-top: 3vw;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
 @include landscape(xs+'land') {
     .info_border {
         width: 100%;
@@ -447,7 +671,7 @@
         div {
             margin: 2vh 0 0 0vw;
             padding-left: 1vw;
-            font-size: 3vw;
+            font-size: 40px;
             height: 6vh;
         }
     

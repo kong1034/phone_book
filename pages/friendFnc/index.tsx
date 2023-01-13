@@ -99,18 +99,20 @@ export default function FriendFnc() {
                     <button onClick={imageUploadBtn}>이미지 업로드</button>
                 </div>
                 <div className={classes.info_div}>
-                    <p>
-                    <label htmlFor="name">이름</label>
-                    <input ref={nameRef} type='text' placeholder={friendInfo ? friendInfo.username : ""}/>
-                    </p>
-                    <p>
-                    <label htmlFor="name">생년월일</label>
-                    <input ref={birthRef} className={classes.birth_input} type='select' placeholder={friendInfo ? friendInfo.birth : ""}/>
-                    </p>
-                    <p>
-                    <label htmlFor="name">번호</label>
-                    <input ref={numberRef} type='text' placeholder={friendInfo ? friendInfo.phone : ""}/>
-                    </p>
+                    <ul>
+                        <li>
+                            <label htmlFor="name">이름  </label>
+                            <input ref={nameRef} type='text' placeholder={friendInfo ? friendInfo.username : ""}/>
+                        </li>
+                        <li>
+                            <label htmlFor="name">생년월일</label>
+                            <input ref={birthRef} className={classes.birth_input} type='select' placeholder={friendInfo ? friendInfo.birth : ""}/>
+                        </li>
+                        <li>
+                            <label htmlFor="name">번호    </label>
+                            <input ref={numberRef} type='text' placeholder={friendInfo ? friendInfo.phone : ""}/>
+                        </li>
+                    </ul>
                     {
                         router.query.id === undefined ? 
                         <button onClick={addFriendBtn}>추가하기</button>

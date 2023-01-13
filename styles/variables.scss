@@ -51,6 +51,34 @@ $xxl : 1400px;
         @media only screen and (max-device-width: $xxs) and (height: 653px) and (orientation:portrait) and (hover:none) {
             @content;
         }
+    } @else if $point == xxs+"oriendesktop" {
+        @media only screen and (min-device-width: $xxs) and (orientation:portrait) and (hover:hover) {
+            @content;
+        }
+    } @else if $point == xs+"oriendesktop" {
+        @media only screen and (min-device-width: $xs) and (orientation:portrait) and (hover:hover) {
+            @content;
+        }
+    } @else if $point == s+"oriendesktop" {
+        @media only screen and (min-device-width: $s) and (orientation:portrait) and (hover:hover) {
+            @content;
+        }
+    } @else if $point == m+"oriendesktop" {
+        @media only screen and (min-device-width: $m) and (orientation:portrait) and (hover:hover) {
+            @content;
+        }
+    } @else if $point == l+"oriendesktop" {
+        @media only screen and (min-device-width: $l) and (orientation:portrait) and (hover:hover) {
+            @content;
+        }
+    } @else if $point == xl+"oriendesktop" {
+        @media only screen and (min-device-width: $xl) and (orientation:portrait) and (hover:hover) {
+            @content;
+        }
+    } @else if $point == xxl+"oriendesktop" {
+        @media only screen and (min-device-width: $xxl) and (orientation:portrait) and (hover:hover) {
+            @content;
+        }
     }
 }
 
